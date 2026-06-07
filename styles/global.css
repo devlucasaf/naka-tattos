@@ -1,0 +1,614 @@
+/* --- RESET & VARIÁVEIS (PORTUGUÊS) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preto: #0a0a0a;
+    --preto-suave: #111111;
+    --vermelho: #c53a1f;
+    --vermelho-escuro: #a52a12;
+    --branco: #f5f5f5;
+    --branco-fumaca: #ececec;
+    --dourado: #d4af37;
+    --dourado-suave: #e4c262;
+    --cinza-escuro: #2a2a2a;
+    --transicao-padrao: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- TIPOGRAFIA ORIENTAL --- */
+h1, h2, h3, h4, .logo-principal, .etiqueta-secao, .citacao-sobre {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+/* --- CABEÇALHO / NAVEGAÇÃO --- */
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transicao-padrao);
+}
+
+.container-cabecalho {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-principal {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-principal span {
+    color: var(--dourado);
+}
+
+.logo-texto {
+    color: var(--branco);
+}
+
+.logo-detalhe {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--dourado-suave);
+    margin-top: -5px;
+}
+
+.lista-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.link-menu {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transicao-padrao);
+    position: relative;
+}
+
+.link-menu::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--dourado);
+    transition: 0.3s;
+}
+
+.link-menu:hover::after,
+.link-menu.ativo::after {
+    width: 100%;
+}
+
+.link-menu:hover,
+.link-menu.ativo {
+    color: var(--dourado);
+}
+
+.menu-hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--dourado);
+}
+
+/* --- SEÇÕES GERAIS --- */
+.secao {
+    padding: 7rem 2rem;
+}
+
+.container-largura {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.etiqueta-secao {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: var(--dourado);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-secao {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    color: var(--branco);
+}
+
+.linha-dourada {
+    width: 70px;
+    height: 3px;
+    background: var(--dourado);
+    margin: 1rem auto 0;
+}
+
+.subtitulo-secao {
+    margin-top: 1rem;
+    color: #bbbbbb;
+    font-size: 1rem;
+}
+
+/* --- HOME --- */
+.secao-home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1614050134059-0d8c1d7bdfb6?q=80&w=2070&auto=format') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.overlay-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.conteudo-home {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.home-texto {
+    flex: 1;
+}
+
+.home-saudacao {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: var(--dourado);
+    text-transform: uppercase;
+    border-left: 3px solid var(--dourado);
+    padding-left: 1rem;
+}
+
+.home-titulo {
+    font-size: 4rem;
+    margin: 1.5rem 0 1rem;
+    line-height: 1.2;
+}
+
+.titulo-destaque {
+    color: var(--dourado);
+    border-bottom: 2px solid var(--vermelho);
+}
+
+.home-descricao {
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 1rem 0 2rem;
+    color: #ddd;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 40px;
+    transition: var(--transicao-padrao);
+    margin-right: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.botao-primario {
+    background: var(--dourado);
+    color: var(--preto);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.botao-primario:hover {
+    background: var(--branco);
+    transform: translateY(-3px);
+}
+
+.botao-secundario {
+    background: transparent;
+    border: 1.5px solid var(--dourado);
+    color: var(--dourado);
+}
+
+.botao-secundario:hover {
+    background: var(--dourado);
+    color: var(--preto);
+}
+
+.home-emblema {
+    flex: 0.4;
+    text-align: center;
+}
+
+.circulo-dourado {
+    width: 180px;
+    height: 180px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: var(--dourado);
+    backdrop-filter: blur(4px);
+}
+
+/* --- SOBRE MIM --- */
+.secao-sobre {
+    background: var(--preto-suave);
+}
+
+.grade-sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.moldura-imagem {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+}
+
+.moldura-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.moldura-imagem:hover img {
+    transform: scale(1.02);
+}
+
+.selo-tradicao {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--preto);
+    padding: 0.5rem 1rem;
+    border-left: 4px solid var(--dourado);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.sobre-nome {
+    font-size: 2.2rem;
+    color: var(--dourado);
+    margin-bottom: 1rem;
+}
+
+.destaque-vermelho {
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+.caracteristicas {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.caracteristica-item {
+    background: #1e1e1e;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.caracteristica-item i {
+    color: var(--dourado);
+}
+
+.citacao-sobre {
+    background: rgba(212, 175, 55, 0.05);
+    padding: 1.2rem;
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 1.1rem;
+    border-left: 3px solid var(--dourado);
+}
+
+/* --- MINHAS ARTES ---= */
+.secao-artes {
+    background: var(--preto);
+}
+
+.grade-instagram {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 2rem;
+}
+
+.card-instagram {
+    background: #161616;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.card-instagram:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -10px rgba(0,0,0,0.6);
+    border-color: var(--dourado);
+}
+
+.card-instagram img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-instagram {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.curtidas {
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.curtidas i {
+    color: var(--vermelho);
+    margin-right: 5px;
+}
+
+.botao-instagram-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.botao-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicao-padrao);
+}
+
+.botao-instagram:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- CONTATOS --- */
+.secao-contato {
+    background: var(--preto-suave);
+}
+
+.grade-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.card-info {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 1px solid #2c2c2c;
+}
+
+.card-info i {
+    font-size: 2rem;
+    color: var(--dourado);
+    margin-bottom: 0.8rem;
+}
+
+.card-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.redes-sociais p {
+    color: var(--dourado);
+    font-weight: 500;
+}
+
+.formulario-contato {
+    background: #141414;
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.formulario-contato h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--dourado);
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #222;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    color: var(--branco);
+    font-family: inherit;
+    margin-bottom: 1rem;
+    transition: var(--transicao-padrao);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.enviar-botao {
+    width: 100%;
+    justify-content: center;
+    background: var(--dourado);
+    color: var(--preto);
+    font-weight: bold;
+}
+
+.feedback-mensagem {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- RODAPÉ --- */
+.rodape {
+    background: #050505;
+    padding: 2rem;
+    border-top: 1px solid var(--dourado);
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rodape-logo span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--dourado);
+}
+
+.rodape-links a {
+    color: #aaa;
+    margin: 0 0.8rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.rodape-links a:hover {
+    color: var(--dourado);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 950px) {
+    .grade-sobre, .grade-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .home-titulo {
+        font-size: 2.8rem;
+    }
+
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.97);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        gap: 1.5rem;
+        backdrop-filter: blur(12px);
+    }
+
+    .lista-menu.ativo-mobile {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .secao-home {
+        background-attachment: scroll;
+    }
+
+    .conteudo-home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-saudacao {
+        border-left: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo-secao {
+        font-size: 2.2rem;
+    }
+}

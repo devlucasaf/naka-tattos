@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="description" content="Estúdio de tatuagem oriental - Arte sobre pele com tradição e modernidade">
+        <title>Naka Tattoo | Arte Oriental sobre a Pele</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="styles/global.css">
+    </head>
+    <body>
+
+        <header class="cabecalho" id="cabecalho">
+            <div class="container-cabecalho">
+                <div class="logo">
+                    <span class="logo-principal">龍 <span class="logo-texto">Ryu Tattoo</span></span>
+                    <span class="logo-detalhe">Horikami</span>
+                </div>
+                <nav class="menu-navegacao">
+                    <ul class="lista-menu">
+                        <li><a href="#home" class="link-menu" data-secao="home">Home</a></li>
+                        <li><a href="#sobre" class="link-menu" data-secao="sobre">Sobre mim</a></li>
+                        <li><a href="#artes" class="link-menu" data-secao="artes">Minhas artes</a></li>
+                        <li><a href="#contato" class="link-menu" data-secao="contato">Contatos</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-hamburger" id="menuHamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="secao secao-home">
+                <div class="overlay-home"></div>
+                <div class="conteudo-home">
+                    <div class="home-texto">
+                        <span class="home-saudacao">Horimono · Irezumi</span>
+                        <h1 class="home-titulo">Tatuagem Old School, Oriental e Realismo Preto e Cinza<br> <span class="titulo-destaque">Arte & Tradição</span></h1>
+                        <p class="home-descricao">Traços que contam histórias ancestrais. Cada agulhada carrega o espírito do dragão, da koi e da peônia. Transforme sua pele em uma tela viva.</p>
+                        <div class="home-botoes">
+                            <a href="#contato" class="botao botao-primario">Agendar sessão <i class="fas fa-arrow-right"></i></a>
+                            <a href="#artes" class="botao botao-secundario">Ver artes <i class="fas fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="home-emblema">
+                        <div class="circulo-dourado">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO SOBRE MIM -->
+            <section id="sobre" class="secao secao-sobre">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 私について ·</span>
+                        <h2 class="titulo-secao">Sobre mim</h2>
+                        <div class="linha-dourada"></div>
+                    </div>
+                    <div class="grade-sobre">
+                        <div class="sobre-imagem">
+                            <div class="moldura-imagem">
+                                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop" alt="Tatuador profissional estilo oriental" loading="lazy">
+                                <div class="selo-tradicao">
+                                    <i class="fas fa-feather-alt"></i> 15 anos de tradição
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sobre-conteudo">
+                            <h3 class="sobre-nome">Kenji Saito</h3>
+                            <p class="sobre-descricao">Sou especialista em <span class="destaque-vermelho">tatuagem oriental tradicional</span> (Irezumi, Tebori e estilos neo-japoneses). Minha jornada começou no Japão, onde estudei com mestres em Tóquio e Osaka. Acredito que cada desenho deve respeitar a anatomia, fluir como a água e carregar simbolismo milenar.</p>
+                            <div class="caracteristicas">
+                                <div class="caracteristica-item">
+                                    <i class="fas fa-waveform"></i>
+                                    <span>Traços precisos</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Cores vibrantes</span>
+                                </div>
+                                <div class="caracteristica-item">
+                                    <i class="fas fa-hand-sparkles"></i>
+                                    <span>Esterilização total</span>
+                                </div>
+                            </div>
+                            <div class="citacao-sobre">
+                                <i class="fas fa-quote-left"></i> A pele é o pergaminho mais nobre, a tinta é a alma do guerreiro.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO MINHAS ARTES (FEED INSTAGRAM) -->
+            <section id="artes" class="secao secao-artes">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 作品集 ·</span>
+                        <h2 class="titulo-secao">Minhas artes</h2>
+                        <div class="linha-dourada"></div>
+                        <p class="subtitulo-secao">Feed direto do Instagram — inspirações orientais em cada traço</p>
+                    </div>
+                    <!-- Grid do Feed Instagram (renderizado via JS) -->
+                    <div class="grade-instagram" id="gradeInstagram"></div>
+                    <div class="botao-instagram-wrapper">
+                        <a href="https://www.instagram.com/seudestino" target="_blank" class="botao-instagram" id="botaoInstagramLink">
+                            <i class="fab fa-instagram"></i> Seguir no Instagram
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO CONTATOS -->
+            <section id="contato" class="secao secao-contato">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 連絡 ·</span>
+                        <h2 class="titulo-secao">Contatos</h2>
+                        <div class="linha-dourada"></div>
+                    </div>
+                    <div class="grade-contato">
+                        <div class="info-contato">
+                            <div class="card-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>Estúdio</h4>
+                                <p>Rua das Camélias, 211 - Vila Japonesa<br>São Paulo - SP</p>
+                            </div>
+                            <div class="card-info">
+                                <i class="fab fa-whatsapp"></i>
+                                <h4>WhatsApp direto</h4>
+                                <p>(11) 98765-4321</p>
+                            </div>
+                            <div class="card-info">
+                                <i class="far fa-envelope"></i>
+                                <h4>E-mail</h4>
+                                <p>kenji@ryutattoo.art</p>
+                            </div>
+                            <div class="card-info redes-sociais">
+                                <i class="fab fa-instagram"></i>
+                                <h4>Instagram</h4>
+                                <p>@naka.tattoos</p>
+                            </div>
+                        </div>
+                        <div class="formulario-contato">
+                            <h3>Envie uma mensagem</h3>
+                            <form id="formContato" class="form-contato">
+                                <div class="campo-form">
+                                    <input type="text" id="nomeContato" placeholder="Seu nome" required>
+                                </div>
+                                <div class="campo-form">
+                                    <input type="email" id="emailContato" placeholder="Seu e-mail" required>
+                                </div>
+                                <div class="campo-form">
+                                    <textarea id="mensagemContato" rows="4" placeholder="Descreva sua ideia ou dúvida..." required></textarea>
+                                </div>
+                                <button type="submit" class="botao botao-primario enviar-botao">Enviar mensagem <i class="fas fa-paper-plane"></i></button>
+                            </form>
+                            <div id="mensagemFeedback" class="feedback-mensagem"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <div class="container-rodape">
+                <div class="rodape-conteudo">
+                    <div class="rodape-logo">
+                        <span>龍 Naka Tattoos</span>
+                        <small>Artes sobre a pele</small>
+                    </div>
+                    <div class="rodape-links">
+                        <a href="#home">Home</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#artes">Artes</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                    <div class="rodape-copyright">
+                        <p>© 2026 Ryu Tattoo Studio. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
