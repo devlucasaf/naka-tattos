@@ -402,6 +402,19 @@ h1, h2, h3, h4, .logo-principal, .etiqueta-secao, .citacao-sobre {
     display: block;
 }
 
+/* Embed do Instagram dentro do card */
+.card-instagram-embed {
+    display: flex;
+    align-items: stretch;
+}
+
+.card-instagram-embed iframe {
+    width: 100%;
+    min-height: 400px;
+    border: none;
+    border-radius: 16px;
+}
+
 .info-instagram {
     padding: 0.8rem;
     display: flex;

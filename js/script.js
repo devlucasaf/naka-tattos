@@ -7,13 +7,15 @@ const mensagemFeedback   = document.getElementById('mensagemFeedback');
 const gradeInstagram     = document.getElementById('gradeInstagram');
 const botaoInstagramLink = document.getElementById('botaoInstagramLink');
 
+// Tipo 'imagem': card com imagem normal
+// Tipo 'instagram': embed de post do Instagram (usar o shortcode do post)
 const artesInstagram = [
-    { imagem: 'https://www.instagram.com/naka.tattoos/p/DVbgNwAAApi/?hl=pt-br',                     curtidas: 1245, legenda: 'Fechamento no estilo preto e cinza pro mano @guixz.jpeg Tamo junto mano!🫵🏽👊🏽🔥' },
-    { imagem: 'https://images.unsplash.com/photo-1599690436009-26d8a6b09a0b?w=400&h=400&fit=crop',  curtidas: 982, legenda: 'Koi e onda tradicional' },
-    { imagem: 'https://images.unsplash.com/photo-1607542604705-7ef941dd87a4?w=400&h=400&fit=crop',  curtidas: 1567, legenda: 'Peônia e máscara Hannya' },
-    { imagem: 'https://images.unsplash.com/photo-1642758842833-b36e1d013dec?w=400&h=400&fit=crop',  curtidas: 2103, legenda: 'Tigre e bambu' },
-    { imagem: 'https://images.unsplash.com/photo-1617541060901-9e4eac31d09a?w=400&h=400&fit=crop',  curtidas: 877, legenda: 'Kirín místico' },
-    { imagem: 'https://images.unsplash.com/photo-1621722246937-16e52b7c2542?w=400&h=400&fit=crop',  curtidas: 1440, legenda: 'Samurai em batalha' }
+    { tipo: 'instagram', shortcode: 'DVbgNwAAApi', legenda: 'Fechamento no estilo preto e cinza pro mano @guixz.jpeg Tamo junto mano!🫵🏽👊🏽🔥' },
+    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1599690436009-26d8a6b09a0b?w=400&h=400&fit=crop',  curtidas: 982, legenda: 'Koi e onda tradicional' },
+    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1607542604705-7ef941dd87a4?w=400&h=400&fit=crop',  curtidas: 1567, legenda: 'Peônia e máscara Hannya' },
+    { tipo: 'instagram', shortcode: 'COLOQUE_SHORTCODE_AQUI', legenda: 'Post do Instagram' },
+    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1617541060901-9e4eac31d09a?w=400&h=400&fit=crop',  curtidas: 877, legenda: 'Kirín místico' },
+    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1621722246937-16e52b7c2542?w=400&h=400&fit=crop',  curtidas: 1440, legenda: 'Samurai em batalha' }
 ];
 
 function carregarFeedInstagram() {
@@ -23,14 +25,31 @@ function carregarFeedInstagram() {
     gradeInstagram.innerHTML = '';
     artesInstagram.forEach(arte => {
         const card = document.createElement('div');
-        card.classList.add('card-instagram');
-        card.innerHTML = `
-            <img src="${arte.imagem}" alt="Tatuagem oriental: ${arte.legenda}" loading="lazy">
-            <div class="info-instagram">
-                <span class="legenda-pequena">${arte.legenda}</span>
-                <span class="curtidas"><i class="fas fa-heart"></i> ${formatarCurtidas(arte.curtidas)}</span>
-            </div>
-        `;
+
+        if (arte.tipo === 'instagram') {
+            card.classList.add('card-instagram', 'card-instagram-embed');
+            card.innerHTML = `
+                <iframe
+                    src="https://www.instagram.com/p/${arte.shortcode}/embed/"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    loading="lazy"
+                    title="Post Instagram: ${arte.legenda}"
+                ></iframe>
+            `;
+        } else {
+            // Card com imagem normal
+            card.classList.add('card-instagram');
+            card.innerHTML = `
+                <img src="${arte.imagem}" alt="Tatuagem oriental: ${arte.legenda}" loading="lazy">
+                <div class="info-instagram">
+                    <span class="legenda-pequena">${arte.legenda}</span>
+                    <span class="curtidas"><i class="fas fa-heart"></i> ${formatarCurtidas(arte.curtidas)}</span>
+                </div>
+            `;
+        }
+
         gradeInstagram.appendChild(card);
     });
 }
