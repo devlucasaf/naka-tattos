@@ -11,11 +11,11 @@ const botaoInstagramLink = document.getElementById('botaoInstagramLink');
 // Tipo 'instagram': embed de post do Instagram (usar o shortcode do post)
 const artesInstagram = [
     { tipo: 'instagram', shortcode: 'DVbgNwAAApi', legenda: 'Fechamento no estilo preto e cinza pro mano @guixz.jpeg Tamo junto mano!🫵🏽👊🏽🔥' },
-    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1599690436009-26d8a6b09a0b?w=400&h=400&fit=crop',  curtidas: 982, legenda: 'Koi e onda tradicional' },
-    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1607542604705-7ef941dd87a4?w=400&h=400&fit=crop',  curtidas: 1567, legenda: 'Peônia e máscara Hannya' },
+    { tipo: 'imagem', imagem: 'https://www.instagram.com/naka.tattoos/p/CsETD-qugw1/',  curtidas: 982, legenda: 'Samurai no estilo preto e cinza q rolou no brother @marcos_esaki ✌🏽Obrigado pela confiança e por aguentar até o fim🫡' },
+    { tipo: 'imagem', imagem: 'https://www.instagram.com/naka.tattoos/p/Cr01iRFOKzo/',  curtidas: 1567, legenda: 'Máscara Hannya no estilo preto e cinza finalizada pro meu mano @raasch.png 👊🏼✌🏽Trabalho realizado em 2 sessões. Obrigado pela confiança meu chapa!!! 🫡' },
     { tipo: 'instagram', shortcode: 'COLOQUE_SHORTCODE_AQUI', legenda: 'Post do Instagram' },
-    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1617541060901-9e4eac31d09a?w=400&h=400&fit=crop',  curtidas: 877, legenda: 'Kirín místico' },
-    { tipo: 'imagem', imagem: 'https://images.unsplash.com/photo-1621722246937-16e52b7c2542?w=400&h=400&fit=crop',  curtidas: 1440, legenda: 'Samurai em batalha' }
+    { tipo: 'imagem', imagem: 'https://www.instagram.com/naka.tattoos/p/DZP6tUHAESu/',  curtidas: 877, legenda: 'Primeira sessão desse trampo do Avenged Sevenfold pro mano @__.fr3it4s.__💀🦇🤘🏽' },
+    { tipo: 'imagem', imagem: 'https://www.instagram.com/naka.tattoos/p/DXPJULVAOFb/',  curtidas: 1440, legenda: 'Processo de fechamento de braço que tá rolando ⛵️🏴‍☠️' }
 ];
 
 function carregarFeedInstagram() {
