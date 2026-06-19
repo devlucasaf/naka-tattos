@@ -4,7 +4,7 @@
 />
 
 
-# 龍 Naka Tattos
+# 仲村渠グスタボ Naka Tattos
 
 Site profissional do tatuador **Naka Tattos**, especializado em tatuagem Old School, Oriental e Realismo Preto e Cinza.
 
@@ -25,12 +25,57 @@ Landing page desenvolvida para divulgar o trabalho do Naka Tattos, com integraç
 
 ## 🛠️ Tecnologias
 
-- HTML5
-- CSS3 (responsivo, variáveis CSS)
-- JavaScript (vanilla)
-- Google Fonts (Inter, Cormorant Garamond)
-- Font Awesome
-- Instagram Embed API
+<div align="center">
+    <img 
+        alt="JavaScript" 
+        title="JavaScript" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=javascript" 
+    />
+    <img 
+        alt="HTML" 
+        title="HTML" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=html" 
+    />
+    <img 
+        alt="CSS" 
+        title="CSS" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=css" 
+    />
+    <img 
+        alt="Git" 
+        title="Git" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=git" 
+    />
+    <img 
+        alt="GitHub" 
+        title="GitHub" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=github" 
+    />
+    <img 
+        alt="VS Code" 
+        title="VS Code" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=vscode" 
+    />
+    <img 
+        alt="Instagram" 
+        title="Instagram" 
+        width="40px" 
+        style="padding: 5px;" 
+        src="https://skillicons.dev/icons?i=instagram" 
+    />
+</div>
 
 ## 📁 Estrutura
 
@@ -65,7 +110,8 @@ O shortcode é o código que aparece na URL do post:
 
 ## 📝 Licença
 
-Este projeto é de uso pessoal do Naka Tattos. Todos os direitos reservados.
+``Este projeto é de uso pessoal do Gustavo Nakamandari. Todos os direitos reservados.``
+[LICENSE](./LICENSE)
 
 <img 
     width=100% 
