@@ -38,10 +38,19 @@ function carregarFeedInstagram() {
         } else {
             card.classList.add("card-instagram");
             card.innerHTML = `
-                <img src="${arte.imagem}" alt="Tatuagem oriental: ${arte.legenda}" loading="lazy">
+                <img 
+                    src="${arte.imagem}" 
+                    alt="Tatuagem oriental: ${arte.legenda}" 
+                    loading="lazy"
+                />
                 <div class="info-instagram">
-                    <span class="legenda-pequena">${arte.legenda}</span>
-                    <span class="curtidas"><i class="fas fa-heart"></i> ${formatarCurtidas(arte.curtidas)}</span>
+                    <span class="legenda-pequena">
+                        ${arte.legenda}
+                    </span>
+                    <span class="curtidas">
+                        <i class="fas fa-heart"></i> 
+                        ${formatarCurtidas(arte.curtidas)}
+                    </span>
                 </div>
             `;
         }
@@ -73,6 +82,7 @@ function ativarLinkMenu() {
     linksMenu.forEach(link => {
         link.classList.remove("ativo");
     });
+
     if (indexAtual !== -1 && linksMenu[indexAtual]) {
         linksMenu[indexAtual].classList.add("ativo");
     }
