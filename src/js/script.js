@@ -1,15 +1,13 @@
-// --- SELEÇÃO DE ELEMENTOS DO DOM ---
-const menuHamburguer     = document.getElementById("menuHamburger");    // botão do menu mobile
-const listaMenuMobile    = document.querySelector(".lista-menu");        // lista de links do menu
-const linksMenu          = document.querySelectorAll(".link-menu");      // todos os links de navegação
-const secaoHome          = document.getElementById("home");             // seção inicial
-const formularioContato  = document.getElementById("formContato");       // formulário de contato
-const mensagemFeedback   = document.getElementById("mensagemFeedback");  // área de feedback do formulário
-const gradeInstagram     = document.getElementById("gradeInstagram");    // grade onde entram os posts do Instagram
-const botaoInstagramLink = document.getElementById("botaoInstagramLink"); // botão "Seguir no Instagram"
+const menuHamburguer     = document.getElementById("menuHamburger");        
+const listaMenuMobile    = document.querySelector(".lista-menu");           
+const linksMenu          = document.querySelectorAll(".link-menu");         
+const secaoHome          = document.getElementById("home");                 
+const formularioContato  = document.getElementById("formContato");          
+const mensagemFeedback   = document.getElementById("mensagemFeedback");     
+const gradeInstagram     = document.getElementById("gradeInstagram");       
+const botaoInstagramLink = document.getElementById("botaoInstagramLink");   
 
 // --- DADOS DO FEED DO INSTAGRAM ---
-// Cada item é um post: 'instagram' usa embed via shortcode, 'imagem' usa uma imagem direta
 const artesInstagram = [
     { tipo: "instagram", shortcode: "DVbgNwAAApi", legenda: "Fechamento no estilo preto e cinza pro mano @guixz.jpeg Tamo junto mano!🫵🏽👊🏽🔥" },
     { tipo: "instagram", shortcode: "CsETD-qugw1", legenda: "Samurai no estilo preto e cinza q rolou no brother @marcos_esaki ✌🏽Obrigado pela confiança e por aguentar até o fim🫡" },
@@ -20,17 +18,14 @@ const artesInstagram = [
 
 // --- CARREGAMENTO DO FEED DO INSTAGRAM ---
 function carregarFeedInstagram() {
-    // interrompe se a grade não existir nesta página
     if (!gradeInstagram) {
         return;
     }
-    // limpa o conteúdo antes de renderizar
+    
     gradeInstagram.innerHTML = "";
-    // percorre cada arte e cria o card correspondente
     artesInstagram.forEach(arte => {
         const card = document.createElement("div");
 
-        // renderiza embed do Instagram
         if (arte.tipo === "instagram") {
             card.classList.add("card-instagram", "card-instagram-embed");
             card.innerHTML = `
@@ -44,7 +39,6 @@ function carregarFeedInstagram() {
                 ></iframe>
             `;
         } else {
-            // renderiza card com imagem comum
             card.classList.add("card-instagram");
             card.innerHTML = `
                 <img 
@@ -70,7 +64,6 @@ function carregarFeedInstagram() {
 
 // --- FORMATAÇÃO DO NÚMERO DE CURTIDAS ---
 function formatarCurtidas(numero) {
-    // converte milhares para o formato "1.2k"
     if (numero >= 1000) {
         return (numero / 1000).toFixed(1) + "k";
     }
@@ -79,13 +72,10 @@ function formatarCurtidas(numero) {
 
 // --- DESTAQUE DO LINK ATIVO CONFORME A ROLAGEM ---
 function ativarLinkMenu() {
-    // considera apenas seções que possuem id
     const secoes = document.querySelectorAll("section[id]");
-    // posição atual da rolagem com um deslocamento para o cabeçalho
     const scrollPos = window.scrollY + 150;
     let idAtual = "";
 
-    // descobre qual seção está visível na tela
     secoes.forEach(secao => {
         const topo = secao.offsetTop;
         const altura = secao.offsetHeight;
@@ -94,7 +84,6 @@ function ativarLinkMenu() {
         }
     });
 
-    // destaca apenas links de âncora interna (que começam com #) da seção atual
     linksMenu.forEach(link => {
         const href = link.getAttribute("href");
         if (href && href.startsWith("#")) {
@@ -103,14 +92,13 @@ function ativarLinkMenu() {
     });
 }
 
-// --- MENU MOBILE (HAMBÚRGUER) ---
+// --- MENU MOBILE ---
 function alternarMenuMobile() {
     if (menuHamburguer && listaMenuMobile) {
-        // abre/fecha o menu ao clicar no botão hambúrguer
         menuHamburguer.addEventListener("click", () => {
             listaMenuMobile.classList.toggle("ativo-mobile");
         });
-        // fecha o menu ao clicar em qualquer link
+        
         linksMenu.forEach(link => {
             link.addEventListener("click", () => {
                 listaMenuMobile.classList.remove("ativo-mobile");
@@ -121,29 +109,23 @@ function alternarMenuMobile() {
 
 // --- ENVIO DO FORMULÁRIO DE CONTATO ---
 function enviarFormulario(evento) {
-    // impede o recarregamento padrão da página
     evento.preventDefault();
-    // captura e limpa os valores dos campos
     const nome = document.getElementById("nomeContato")?.value.trim();
     const email = document.getElementById("emailContato")?.value.trim();
     const mensagem = document.getElementById("mensagemContato")?.value.trim();
 
-    // valida se todos os campos foram preenchidos
     if (!nome || !email || !mensagem) {
         exibirMensagem("Preencha todos os campos, por favor.", "erro");
         return;
     }
 
-    // valida o formato básico do e-mail
     if (!email.includes("@") || !email.includes(".")) {
         exibirMensagem("Digite um e-mail válido.", "erro");
         return;
     }
 
-    // exibe mensagem de sucesso e limpa o formulário
     exibirMensagem(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso. Em breve retornarei.`, "sucesso");
     formularioContato.reset();
-    // remove a mensagem de feedback após 5 segundos
     setTimeout(() => {
         if (mensagemFeedback) {
             mensagemFeedback.innerHTML = "";
@@ -156,7 +138,6 @@ function exibirMensagem(texto, tipo) {
     if (!mensagemFeedback) {
         return;
     }
-    // define a cor conforme o tipo: dourado para sucesso, vermelho para erro
     mensagemFeedback.innerHTML = `<span style="color: ${tipo === "sucesso" ? "#d4af37" : "#c53a1f"};">${texto}</span>`;
 }
 
@@ -165,12 +146,10 @@ function configurarRolagemSuave() {
     linksMenu.forEach(link => {
         link.addEventListener("click", function(e) {
             const destinoId = this.getAttribute("href");
-            // aplica apenas em links internos (âncoras que começam com #)
             if (destinoId && destinoId.startsWith("#")) {
                 const elementoDestino = document.querySelector(destinoId);
                 if (elementoDestino) {
                     e.preventDefault();
-                    // rola suavemente até a seção de destino
                     elementoDestino.scrollIntoView({ 
                         behavior: "smooth", 
                         block: "start" 
@@ -189,6 +168,7 @@ function definirLinkInstagram() {
 }
 
 // --- DADOS DA GALERIA DE FOTOS ---
+
 // Fotos das tatuagens
 const galeriaFotos = [
     { imagem: "../img/naka-tattos-img.jpg", legenda: "Trabalho autoral no estilo oriental" }
@@ -200,7 +180,7 @@ const fotosEstudio = [
 ];
 
 // --- ELEMENTOS DA GALERIA E DO LIGHTBOX ---
-const galeriaImagens  = document.getElementById("galeriaImagens");    
+const galeriaImagens   = document.getElementById("galeriaImagens");    
 const lightbox         = document.getElementById("lightbox");         
 const lightboxImagem   = document.getElementById("lightboxImagem");   
 const lightboxLegenda  = document.getElementById("lightboxLegenda");  
@@ -216,14 +196,18 @@ function carregarGaleria() {
     if (!galeriaImagens) {
         return;
     }
-    // escolhe a fonte de fotos conforme o atributo data-fonte do grid
+    
     fotosAtivas = galeriaImagens.dataset.fonte === "estudio" ? fotosEstudio : galeriaFotos;
     galeriaImagens.innerHTML = "";
     fotosAtivas.forEach((foto, indice) => {
         const card = document.createElement("div");
         card.classList.add("card-galeria");
         card.innerHTML = `
-            <img src="${foto.imagem}" alt="${foto.legenda}" loading="lazy">
+            <img 
+                src="${foto.imagem}" 
+                alt="${foto.legenda}" 
+                loading="lazy"
+            />
             <div class="legenda">
                 <i class="fas fa-image"></i> ${foto.legenda}
             </div>
