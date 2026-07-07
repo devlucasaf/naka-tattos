@@ -6,7 +6,7 @@
 
 # 仲村渠グスタボ Naka Tattos
 
-Site profissional do tatuador **Naka Tattos**, especializado em tatuagem Old School, Oriental e Realismo Preto e Cinza.
+Site profissional do tatuador **Gustavo Nakandakari**, especializado em tatuagem Old School, Oriental e Realismo Preto e Cinza.
 
 ## 🔗 Acesse
 
@@ -14,7 +14,7 @@ Site profissional do tatuador **Naka Tattos**, especializado em tatuagem Old Sch
 
 ## 📸 Sobre o Projeto
 
-Landing page desenvolvida para divulgar o trabalho do Naka Tattos, com integração de posts do Instagram e formulário de contato.
+Landing page desenvolvida para divulgar o trabalho do Gustavo Nakandakari, com integração de posts do Instagram e formulário de contato.
 
 ### Seções
 
