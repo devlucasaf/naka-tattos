@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naka Tattoo | Estúdio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../styles/global.css">
+    </head>
+    <body>
+        <header class="cabecalho" id="cabecalho">
+            <div class="container-cabecalho">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-principal">· 仲村渠グスタボ ·
+                        <span class="logo-texto">Naka Tattoo</span>
+                    </span>
+                    <span class="logo-detalhe">Gustavo Nakandakari</span>
+                </a>
+
+                <nav class="menu-navegacao">
+                    <ul class="lista-menu">
+                        <li><a href="../../index.html" class="link-menu">Home</a></li>
+                        <li><a href="galeria.html" class="link-menu">Galeria</a></li>
+                        <li><a href="orcamento.html" class="link-menu">Orçamento</a></li>
+                        <li><a href="estudio.html" class="link-menu ativo">Estúdio</a></li>
+                        <li><a href="contatos.html" class="link-menu">Contatos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="menu-hamburger" id="menuHamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="secao secao-estudio">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
+                        <h2 class="titulo-secao">O Estúdio</h2>
+                        <div class="linha-dourada"></div>
+                        <p class="subtitulo-secao">Um espaço pensado para o seu conforto, com todo o cuidado que a arte exige</p>
+                    </div>
+
+                    <div class="grade-estudio" id="galeriaImagens" data-fonte="estudio">
+                        <!-- --- PREENCHIDO VIA JAVASCRIPT --- -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO AMBIENTE E HIGIENE -->
+            <section class="secao secao-higiene">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 清潔 ·</span>
+                        <h2 class="titulo-secao">Ambiente e Higiene</h2>
+                        <div class="linha-dourada"></div>
+                    </div>
+
+                    <p class="higiene-descricao">
+                        Prezo por um ambiente limpo, acolhedor e totalmente esterilizado.
+                        Todo o material utilizado é descartável e de uso único, seguindo
+                        rigorosos protocolos de biossegurança para garantir a sua saúde
+                        e tranquilidade durante toda a sessão.
+                    </p>
+
+                    <div class="grade-higiene">
+                        <div class="card-higiene">
+                            <i class="fas fa-hand-sparkles"></i>
+                            <h3>Material Descartável</h3>
+                            <p>Agulhas e insumos de uso único, abertos na sua frente.</p>
+                        </div>
+                        <div class="card-higiene">
+                            <i class="fas fa-pump-soap"></i>
+                            <h3>Esterilização Total</h3>
+                            <p>Superfícies e equipamentos higienizados a cada atendimento.</p>
+                        </div>
+                        <div class="card-higiene">
+                            <i class="fas fa-shield-virus"></i>
+                            <h3>Biossegurança</h3>
+                            <p>Protocolos rigorosos seguindo as normas de saúde.</p>
+                        </div>
+                        <div class="card-higiene">
+                            <i class="fas fa-spa"></i>
+                            <h3>Ambiente Acolhedor</h3>
+                            <p>Um espaço confortável para você relaxar durante a sessão.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VENHA CONHECER O ESTÚDIO -->
+            <section class="secao secao-visita">
+                <div class="container-largura">
+                    <div class="cta-contato">
+                        <h3 class="cta-contato-titulo">Venha conhecer o estúdio</h3>
+                        <p class="cta-contato-texto">Agende sua visita e conheça pessoalmente o meu ambiente de trabalho</p>
+                        <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" class="botao botao-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Agendar Visita
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- LIGHTBOX / VISUALIZADOR DE IMAGENS -->
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lightbox-fechar" id="lightboxFechar" aria-label="Fechar">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <button class="lightbox-seta lightbox-anterior" id="lightboxAnterior" aria-label="Imagem anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="lightbox-conteudo">
+                <img src="" alt="" id="lightboxImagem">
+                <p class="lightbox-legenda" id="lightboxLegenda"></p>
+            </div>
+
+            <button class="lightbox-seta lightbox-proximo" id="lightboxProximo" aria-label="Próxima imagem">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <footer class="rodape">
+            <div class="container-rodape">
+                <div class="rodape-conteudo">
+                    <div class="rodape-logo">
+                        <span>仲村渠グスタボ Naka Tattoos</span>
+                        <small>Artes sobre a pele</small>
+                    </div>
+                    <div class="rodape-links">
+                        <a href="../../index.html">Home</a>
+                        <a href="galeria.html">Galeria</a>
+                        <a href="orcamento.html">Orçamento</a>
+                        <a href="estudio.html">Estúdio</a>
+                        <a href="contatos.html">Contato</a>
+                    </div>
+                    <div class="rodape-copyright">
+                        <p>© 2026 仲村渠グスタボ Naka Tattoos. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>
