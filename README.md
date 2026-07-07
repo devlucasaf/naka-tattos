@@ -83,10 +83,16 @@ Landing page desenvolvida para divulgar o trabalho do Naka Tattos, com integraç
 naka-tattos/
 ├── index.html
 ├── README.md
-├── js/
-│   └── script.js
-└── styles/
-    └── global.css
+├── src/
+│   ├── js/
+│   │    └── script.js
+│   ├── pages/
+│   │    ├── galeria.html
+│   │    ├── orcamento.html
+│   │    ├── estudio.html
+│   │    └── contatos.html
+│   └── styles/
+        └── global.css
 ```
 
 ## 🚀 Como usar
