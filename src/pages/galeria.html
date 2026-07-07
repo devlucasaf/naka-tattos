@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naka Tattoo | Galeria</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../styles/global.css">
+        <style>
+            .grade-galeria {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 260px);
+                justify-content: center;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+            .card-galeria {
+                background: #161616;
+                border-radius: 16px;
+                overflow: hidden;
+                border: 1px solid rgba(212, 175, 55, 0.2);
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+            }
+            .card-galeria:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+                border-color: var(--dourado);
+            }
+            .card-galeria img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                display: block;
+            }
+            .card-galeria .legenda {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+                color: #ccc;
+                text-align: center;
+            }
+            .card-galeria .legenda i {
+                color: var(--dourado);
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="cabecalho" id="cabecalho">
+            <div class="container-cabecalho">
+                <div href="../../index.html" class="logo">
+                    <span class="logo-principal">· 仲村渠グスタボ ·
+                        <span class="logo-texto">Naka Tattoo</span>
+                    </span>
+                    <span class="logo-detalhe">Gustavo Nakandakari</span>
+                </div>
+                <nav class="menu-navegacao">
+                    <ul class="lista-menu">
+                        <li><a href="../../index.html" class="link-menu">Home</a></li>
+                        <li><a href="galeria.html" class="link-menu ativo">Galeria</a></li>
+                        <li><a href="orcamento.html" class="link-menu">Orçamento</a></li>
+                        <li><a href="estudio.html" class="link-menu">Estúdio</a></li>
+                        <li><a href="contatos.html" class="link-menu">Contatos</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-hamburger" id="menuHamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="secao">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
+                        <h2 class="titulo-secao">Galeria de Artes</h2>
+                        <div class="linha-dourada"></div>
+                        <p class="subtitulo-secao">Alguns dos trabalhos realizados com dedicação e técnica</p>
+                    </div>
+
+                    <div class="grade-galeria" id="galeriaImagens">
+                        <!-- --- PREENCHIDO VIA JAVASCRIPT --- -->
+                    </div>
+
+                    <div style="margin-top: 4rem; text-align: center;">
+                        <h3 style="color: var(--dourado); text-align: center; margin-bottom: 1.5rem;">Acompanhe o feed no Instagram</h3>
+                        <div class="botao-instagram-wrapper">
+                            <a href="https://www.instagram.com/naka.tattoos" target="_blank" class="botao-instagram">
+                                <i class="fab fa-instagram"></i> Ver mais no Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- LIGHTBOX / VISUALIZADOR DE IMAGENS -->
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lightbox-fechar" id="lightboxFechar" aria-label="Fechar">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-seta lightbox-anterior" id="lightboxAnterior" aria-label="Imagem anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="lightbox-conteudo">
+                <img src="" alt="" id="lightboxImagem">
+                <p class="lightbox-legenda" id="lightboxLegenda"></p>
+            </div>
+            <button class="lightbox-seta lightbox-proximo" id="lightboxProximo" aria-label="Próxima imagem">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <footer class="rodape">
+            <div class="container-rodape">
+                <div class="rodape-conteudo">
+                    <div class="rodape-logo">
+                        <span>仲村渠グスタボ Naka Tattoos</span>
+                        <small>Artes sobre a pele</small>
+                    </div>
+                    <div class="rodape-links">
+                        <a href="../../index.html">Home</a>
+                        <a href="galeria.html">Galeria</a>
+                        <a href="orcamento.html">Orçamento</a>
+                        <a href="estudio.html">Estúdio</a>
+                        <a href="contatos.html">Contato</a>
+                    </div>
+                    <div class="rodape-copyright">
+                        <p>© 2026 仲村渠グスタボ Naka Tattoos. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>
