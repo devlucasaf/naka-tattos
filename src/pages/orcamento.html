@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naka Tattoo | Orçamento</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../styles/global.css">
+        <style>
+            .form-orcamento {
+                max-width: 720px;
+                margin: 0 auto;
+                background: #141414;
+                padding: 2.5rem;
+                border-radius: 24px;
+                border: 1px solid rgba(212, 175, 55, 0.15);
+            }
+            .form-orcamento .campo-form {
+                margin-bottom: 1.2rem;
+            }
+            .form-orcamento label {
+                display: block;
+                font-weight: 500;
+                color: #ddd;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+            }
+            .form-orcamento label .obrigatorio {
+                color: var(--vermelho);
+                margin-left: 2px;
+            }
+
+            .form-orcamento input,
+            .form-orcamento select,
+            .form-orcamento textarea {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                background: #222;
+                border: 1px solid #3a3a3a;
+                border-radius: 12px;
+                color: var(--branco);
+                font-family: inherit;
+                font-size: 1rem;
+                transition: 0.3s;
+                outline: none;
+            }
+
+            .form-orcamento select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+
+                background-color: #222 !important;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d4af37' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 1rem center;
+                background-size: 14px 10px;
+
+                border: 1px solid #3a3a3a;
+                border-radius: 12px;
+                padding: 0.8rem 2.8rem 0.8rem 1rem; 
+                color: #f5f5f5;
+                font-family: inherit;
+                font-size: 1rem;
+                cursor: pointer;
+                width: 100%;
+                transition: 0.3s;
+            }
+
+            .form-orcamento select option {
+                background: #1a1a1a !important;
+                color: #f5f5f5 !important;
+                padding: 8px 12px;
+            }
+
+            .form-orcamento select:focus {
+                border-color: #d4af37;
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+                outline: none;
+            }
+
+            .form-orcamento .campo-duplo {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            .form-orcamento .enviar-botao {
+                width: 100%;
+                margin-top: 0.5rem;
+                padding: 1rem;
+                background: var(--dourado);
+                color: var(--preto);
+                border: none;
+                border-radius: 40px;
+                font-weight: 700;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: 0.3s;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+            }
+
+            .form-orcamento .enviar-botao:hover {
+                background: var(--branco);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            }
+
+            .form-orcamento .feedback {
+                margin-top: 1.2rem;
+                text-align: center;
+                font-size: 1rem;
+                min-height: 2rem;
+            }
+
+            .form-orcamento .feedback.sucesso {
+                color: var(--dourado);
+            }
+
+            .form-orcamento .feedback.erro {
+                color: var(--vermelho);
+            }
+
+            @media (max-width: 600px) {
+                .form-orcamento .campo-duplo {
+                    grid-template-columns: 1fr;
+                }
+
+                .form-orcamento {
+                    padding: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="cabecalho" id="cabecalho">
+            <div class="container-cabecalho">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-principal">· 仲村渠グスタボ ·
+                        <span class="logo-texto">Naka Tattoo</span>
+                    </span>
+                    <span class="logo-detalhe">Gustavo Nakandakari</span>
+                </a>
+
+                <nav class="menu-navegacao">
+                    <ul class="lista-menu">
+                        <li><a href="../../index.html" class="link-menu">Home</a></li>
+                        <li><a href="galeria.html" class="link-menu">Galeria</a></li>
+                        <li><a href="orcamento.html" class="link-menu ativo">Orçamento</a></li>
+                        <li><a href="estudio.html" class="link-menu">Estúdio</a></li>
+                        <li><a href="contatos.html" class="link-menu">Contatos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="menu-hamburger" id="menuHamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="secao">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
+                        <h2 class="titulo-secao">Solicite um Orçamento</h2>
+                        <div class="linha-dourada"></div>
+                        <p class="subtitulo-secao">Preencha o formulário abaixo e receba uma proposta personalizada para a sua tatuagem</p>
+                    </div>
+
+                    <form class="form-orcamento" id="formOrcamento" action="https://formspree.io/f/seu-id-do-form" method="POST">
+                        <div class="campo-duplo">
+                            <div class="campo-form">
+                                <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="nome" 
+                                    name="nome" 
+                                    placeholder="Seu nome" 
+                                    required
+                                >
+                            </div>
+                            <div class="campo-form">
+                                <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="seu@email.com" 
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="telefone">Telefone (WhatsApp)</label>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                placeholder="(61) 9 9999-9999"
+                            >
+                        </div>
+
+                        <div class="campo-duplo">
+                            <div class="campo-form">
+                                <label for="estilo">
+                                    Estilo desejado 
+                                    <span class="obrigatorio">*</span>
+                                </label>
+
+                                <select id="estilo" name="estilo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="old-school">Old School</option>
+                                    <option value="oriental">Oriental</option>
+                                    <option value="preto-cinza">Preto e Cinza</option>
+                                    <option value="realismo">Realismo</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-form">
+                                <label for="local">
+                                    Local da tatuagem 
+                                    <span class="obrigatorio">*</span>
+                                </label>
+
+                                <select id="local" name="local" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="braco">Braço</option>
+                                    <option value="perna">Perna</option>
+                                    <option value="costas">Costas</option>
+                                    <option value="peito">Peito</option>
+                                    <option value="mao">Mão</option>
+                                    <option value="pescoco">Pescoço</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="tamanho">Tamanho aproximado <span class="obrigatorio">*</span></label>
+                            <select id="tamanho" name="tamanho" required>
+                                <option value="">Selecione...</option>
+                                <option value="pequeno">Pequeno (até 10 cm)</option>
+                                <option value="medio">Médio (10–25 cm)</option>
+                                <option value="grande">Grande (25–50 cm)</option>
+                                <option value="fechamento">Fechamento (acima de 50 cm)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="referencias">Referências (opcional)</label>
+                            <input 
+                                type="text" 
+                                id="referencias" 
+                                name="referencias" 
+                                placeholder="URL do Instagram, Pinterest, ou descreva a ideia"
+                            >
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="mensagem">Mensagem adicional</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte mais sobre sua ideia, cores, elementos, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="enviar-botao">
+                            <i class="fas fa-paper-plane"></i> Enviar orçamento
+                        </button>
+
+                        <div class="feedback" id="feedbackOrcamento"></div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <div class="container-rodape">
+                <div class="rodape-conteudo">
+                    <div class="rodape-logo">
+                        <span>仲村渠グスタボ Naka Tattoos</span>
+                        <small>Artes sobre a pele</small>
+                    </div>
+                    <div class="rodape-links">
+                        <a href="../../index.html">Home</a>
+                        <a href="galeria.html">Galeria</a>
+                        <a href="orcamento.html">Orçamento</a>
+                        <a href="estudio.html">Estúdio</a>
+                        <a href="contatos.html">Contato</a>
+                    </div>
+                    <div class="rodape-copyright">
+                        <p>© 2026 Gustavo Nakandakari. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>
