@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="description" content="Estúdio de tatuagem oriental - Arte sobre pele com tradição e modernidade">
-        <title>Naka Tattoo | Arte Oriental sobre a Pele</title>
+        <title>Naka Tattoo</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="src/styles/global.css">
@@ -17,14 +17,16 @@
                     <span class="logo-principal">· 仲村渠グスタボ ·
                         <span class="logo-texto">Naka Tattoo</span>
                     </span>
-                    <span class="logo-detalhe">Horikami</span>
+                    <span class="logo-detalhe">Gustavo Nakandakari</span>
                 </div>
+
                 <nav class="menu-navegacao">
                     <ul class="lista-menu">
-                        <li><a href="#home" class="link-menu" data-secao="home">Home</a></li>
-                        <li><a href="#sobre" class="link-menu" data-secao="sobre">Sobre mim</a></li>
-                        <li><a href="#artes" class="link-menu" data-secao="artes">Minhas artes</a></li>
-                        <li><a href="#contato" class="link-menu" data-secao="contato">Contatos</a></li>
+                        <li><a href="index.html" class="link-menu ativo">Home</a></li>
+                        <li><a href="src/pages/galeria.html" class="link-menu">Galeria</a></li>
+                        <li><a href="src/pages/orcamento.html" class="link-menu">Orçamento</a></li>
+                        <li><a href="src/pages/estudio.html" class="link-menu">Estúdio</a></li>
+                        <li><a href="src/pages/contatos.html" class="link-menu">Contatos</a></li>
                     </ul>
                 </nav>
                 <div class="menu-hamburger" id="menuHamburger">
@@ -38,13 +40,12 @@
                 <div class="overlay-home"></div>
                 <div class="conteudo-home">
                     <div class="home-texto">
-                        <span class="home-saudacao">Horimono · Irezumi</span>
                         <h1 class="home-titulo">Tatuagem Old School, Oriental e Realismo Preto e Cinza<br> <span class="titulo-destaque"></span></h1>
                         <div class="home-botoes">
-                            <a href="#contato" class="botao botao-primario">
+                            <a href="src/pages/contatos.html" class="botao botao-primario">
                                 Agendar sessão <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="#artes" class="botao botao-secundario">
+                            <a href="src/pages/galeria.html" class="botao botao-secundario">
                                 Ver artes <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -53,6 +54,48 @@
                         <div class="circulo-dourado">
                             <i class="fas fa-dragon"></i>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO EXPLORE / NAVEGAÇÃO -->
+            <section id="explore" class="secao secao-explore">
+                <div class="container-largura">
+                    <div class="cabecalho-secao">
+                        <span class="etiqueta-secao">· 探索 ·</span>
+                        <h2 class="titulo-secao">Explore</h2>
+                        <div class="linha-dourada"></div>
+                        <p class="subtitulo-secao">Navegue pelas páginas e conheça o meu trabalho</p>
+                    </div>
+
+                    <div class="grade-navegacao">
+                        <a href="src/pages/galeria.html" class="card-navegacao">
+                            <i class="fas fa-images"></i>
+                            <h3>Galeria</h3>
+                            <p>Veja fotos das tatuagens já realizadas.</p>
+                            <span class="card-navegacao-cta">Ver galeria <i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="src/pages/estudio.html" class="card-navegacao">
+                            <i class="fas fa-torii-gate"></i>
+                            <h3>Estúdio</h3>
+                            <p>Conheça o espaço e a minha história.</p>
+                            <span class="card-navegacao-cta">Conhecer <i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="src/pages/orcamento.html" class="card-navegacao">
+                            <i class="fas fa-pen-nib"></i>
+                            <h3>Orçamento</h3>
+                            <p>Envie a sua ideia e solicite um orçamento.</p>
+                            <span class="card-navegacao-cta">Solicitar <i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="src/pages/contatos.html" class="card-navegacao">
+                            <i class="fas fa-comments"></i>
+                            <h3>Contatos</h3>
+                            <p>Fale comigo pelas redes e agende a sua sessão.</p>
+                            <span class="card-navegacao-cta">Entrar em contato <i class="fas fa-arrow-right"></i></span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -102,24 +145,6 @@
                 </div>
             </section>
 
-            <!-- SEÇÃO MINHAS ARTES -->
-            <section id="artes" class="secao secao-artes">
-                <div class="container-largura">
-                    <div class="cabecalho-secao">
-                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
-                        <h2 class="titulo-secao">Minhas artes</h2>
-                        <div class="linha-dourada"></div>
-                        <p class="subtitulo-secao">Feed direto do Instagram — inspirações orientais em cada traço</p>
-                    </div>
-                    <div class="grade-instagram" id="gradeInstagram"></div>
-                    <div class="botao-instagram-wrapper">
-                        <a href="https://www.instagram.com/naka.tattoos" target="_blank" class="botao-instagram" id="botaoInstagramLink">
-                            <i class="fab fa-instagram"></i> Seguir no Instagram
-                        </a>
-                    </div>
-                </div>
-            </section>
-
             <!-- SEÇÃO CONTATOS -->
             <section id="contato" class="secao secao-contato">
                 <div class="container-largura">
@@ -128,27 +153,15 @@
                         <h2 class="titulo-secao">Contatos</h2>
                         <div class="linha-dourada"></div>
                     </div>
-                    <div class="grade-contato">
-                        <div class="info-contato">
-                            <a href="https://www.google.com/maps?q=-15.8730800,-47.9724920&entry=gps&lucs=,94284460,94224825,94227247,94227248,94231188,94280568,47071704,47069508,94273883,94218641,94282134,94203019,47084304,94286863&g_ep=CAISEjI1LjQyLjEuODE4NTg2NzMyMBgAIIgnKn4sOTQyODQ0NjAsOTQyMjQ4MjUsOTQyMjcyNDcsOTQyMjcyNDgsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsNDcwNjk1MDgsOTQyNzM4ODMsOTQyMTg2NDEsOTQyODIxMzQsOTQyMDMwMTksNDcwODQzMDQsOTQyODY4NjNCAkJS&skid=bc785145-9294-4405-99e9-79cf34b10c28&g_st=ipc" target="_blank" rel="noopener" class="card-info">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <h4>Estúdio</h4>
-                                <p> - Núcleo Bandeirante<br>Brasília - DF</p>
+                    <div class="cta-contato">
+                        <h3 class="cta-contato-titulo">Pronto para sua próxima tatuagem?</h3>
+                        <p class="cta-contato-texto">Entre em contato para um orçamento personalizado e exclusivo</p>
+                        <div class="cta-contato-botoes">
+                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" class="botao botao-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                             </a>
-                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" class="card-info">
-                                <i class="fab fa-whatsapp"></i>
-                                <h4>WhatsApp</h4>
-                                <p>(61) 99238-7016</p>
-                            </a>
-                            <a href="mailto:nakandakari.ttt13@gmail.com" class="card-info">
-                                <i class="far fa-envelope"></i>
-                                <h4>E-mail</h4>
-                                <p>nakandakari.ttt13@gmail.com</p>
-                            </a>
-                            <a href="https://www.instagram.com/naka.tattoos" target="_blank" rel="noopener" class="card-info redes-sociais">
-                                <i class="fab fa-instagram"></i>
-                                <h4>Instagram</h4>
-                                <p>@naka.tattoos</p>
+                            <a href="src/pages/contatos.html" class="botao botao-secundario">
+                                Ver todos os contatos <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -160,14 +173,13 @@
             <div class="container-rodape">
                 <div class="rodape-conteudo">
                     <div class="rodape-logo">
-                        <span>仲村渠グスタボ Naka Tattoos</span>
-                        <small>Artes sobre a pele</small>
+                        <span>Naka Tattoos</span>
                     </div>
                     <div class="rodape-links">
-                        <a href="#home">Home</a>
-                        <a href="#sobre">Sobre</a>
-                        <a href="#artes">Artes</a>
-                        <a href="#contato">Contato</a>
+                        <a href="index.html">Home</a>
+                        <a href="src/pages/galeria.html">Galeria</a>
+                        <a href="src/pages/estudio.html">Estúdio</a>
+                        <a href="src/pages/contatos.html">Contatos</a>
                     </div>
                     <div class="rodape-copyright">
                         <p>© 2026 仲村渠グスタボ Naka Tattoos. Todos os direitos reservados.</p>
