@@ -971,6 +971,128 @@ a.card-info-linha:hover .cta-whatsapp {
     font-size: 0.9rem;
 }
 
+/* --- SELECT CUSTOMIZADO --- */
+.select-custom {
+    position: relative;
+    width: 100%;
+}
+
+.select-nativo-oculto {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.select-custom-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: #222;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transicao-padrao);
+}
+
+.select-custom-trigger:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.select-custom.aberto .select-custom-trigger {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.select-custom-texto {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select-custom-texto.placeholder-texto {
+    color: #888;
+}
+
+.select-custom-icone {
+    color: var(--dourado);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.select-custom.aberto .select-custom-icone {
+    transform: rotate(180deg);
+}
+
+.select-custom-opcoes {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem;
+    background: #1a1a1a;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.select-custom.aberto .select-custom-opcoes {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.select-custom-opcao {
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.select-custom-opcao:hover {
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--dourado);
+}
+
+.select-custom-opcao.selecionada {
+    background: rgba(212, 175, 55, 0.18);
+    color: var(--dourado);
+    font-weight: 600;
+}
+
+.select-custom-opcao.placeholder {
+    color: #888;
+}
+
+.select-custom-opcoes::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select-custom-opcoes::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+}
+
 /* --- RODAPÉ --- */
 .rodape {
     background: #050505;

@@ -322,6 +322,100 @@ function ajustarCabecalho() {
     });
 }
 
+// --- FECHAMENTO DE TODOS OS SELECTS CUSTOMIZADOS ---
+function fecharSelectsCustomizados() {
+    document.querySelectorAll(".select-custom.aberto").forEach(wrapper => {
+        wrapper.classList.remove("aberto");
+        wrapper.querySelector(".select-custom-trigger")?.setAttribute("aria-expanded", "false");
+    });
+}
+
+// --- SELECTS CUSTOMIZADOS ---
+function inicializarSelectsCustomizados() {
+    // percorre todos os selects da página
+    document.querySelectorAll("select").forEach(select => {
+        if (select.dataset.customizado === "true") {
+            return;
+        }
+        select.dataset.customizado = "true";
+
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("select-custom");
+
+        const trigger = document.createElement("button");
+        trigger.type = "button";
+        trigger.classList.add("select-custom-trigger");
+        trigger.setAttribute("aria-haspopup", "listbox");
+        trigger.setAttribute("aria-expanded", "false");
+
+        const texto = document.createElement("span");
+        texto.classList.add("select-custom-texto");
+        const opcaoInicial = select.options[select.selectedIndex];
+        texto.textContent = opcaoInicial ? opcaoInicial.textContent : "";
+        
+        if (!select.value) {
+            texto.classList.add("placeholder-texto");
+        }
+
+        const icone = document.createElement("i");
+        icone.className = "fas fa-chevron-down select-custom-icone";
+
+        trigger.appendChild(texto);
+        trigger.appendChild(icone);
+
+        const lista = document.createElement("ul");
+        lista.classList.add("select-custom-opcoes");
+        lista.setAttribute("role", "listbox");
+
+        Array.from(select.options).forEach((opcao, indice) => {
+            const item = document.createElement("li");
+            item.classList.add("select-custom-opcao");
+            item.textContent = opcao.textContent;
+            item.setAttribute("role", "option");
+            
+            if (indice === select.selectedIndex) {
+                item.classList.add("selecionada");
+            }
+            
+            if (opcao.value === "") {
+                item.classList.add("placeholder");
+            }
+
+            item.addEventListener("click", () => {
+                select.value = opcao.value;
+                texto.textContent = opcao.textContent;
+                texto.classList.toggle("placeholder-texto", opcao.value === "");
+                lista.querySelectorAll(".select-custom-opcao").forEach(o => o.classList.remove("selecionada"));
+                item.classList.add("selecionada");
+                fecharSelectsCustomizados();
+                select.dispatchEvent(new Event("change", { 
+                    bubbles: true 
+                }));
+            });
+
+            lista.appendChild(item);
+        });
+
+        select.parentNode.insertBefore(wrapper, select);
+        wrapper.appendChild(trigger);
+        wrapper.appendChild(lista);
+        wrapper.appendChild(select);
+        select.classList.add("select-nativo-oculto");
+
+        trigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const jaAberto = wrapper.classList.contains("aberto");
+            fecharSelectsCustomizados();
+            if (!jaAberto) {
+                wrapper.classList.add("aberto");
+                trigger.setAttribute("aria-expanded", "true");
+            }
+        });
+    });
+
+    document.addEventListener("click", fecharSelectsCustomizados);
+}
+
 // --- INICIALIZAÇÃO AO CARREGAR A PÁGINA ---
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -332,6 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
     configurarRolagemSuave();
     definirLinkInstagram();
     ajustarCabecalho();
+    inicializarSelectsCustomizados();
     window.addEventListener("scroll", ativarLinkMenu);
     ativarLinkMenu(); 
 
