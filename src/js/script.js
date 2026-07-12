@@ -174,10 +174,6 @@ const galeriaFotos = [
     { imagem: "../img/naka-tattos-img.jpg", legenda: "Trabalho autoral no estilo oriental" }
 ];
 
-// Fotos do estúdio 
-const fotosEstudio = [
-    { imagem: "../img/naka-tattos-img.jpg", legenda: "Ambiente do estúdio" }
-];
 
 // --- ELEMENTOS DA GALERIA E DO LIGHTBOX ---
 const galeriaImagens   = document.getElementById("galeriaImagens");    
@@ -332,7 +328,6 @@ function fecharSelectsCustomizados() {
 
 // --- SELECTS CUSTOMIZADOS ---
 function inicializarSelectsCustomizados() {
-    // percorre todos os selects da página
     document.querySelectorAll("select").forEach(select => {
         if (select.dataset.customizado === "true") {
             return;
