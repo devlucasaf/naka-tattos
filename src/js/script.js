@@ -413,6 +413,45 @@ function inicializarSelectsCustomizados() {
     document.addEventListener("click", fecharSelectsCustomizados);
 }
 
+// --- ACCORDION DO FAQ ---
+function inicializarFaq() {
+    const itensFaq = document.querySelectorAll(".item-faq");
+    if (!itensFaq.length) {
+        return;
+    }
+
+    itensFaq.forEach(item => {
+        const pergunta = item.querySelector(".pergunta-faq");
+        const resposta = item.querySelector(".resposta-faq");
+        if (!pergunta || !resposta) {
+            return;
+        }
+
+        pergunta.addEventListener("click", () => {
+            const estaAberto = item.classList.contains("aberto");
+
+            itensFaq.forEach(outro => {
+                outro.classList.remove("aberto");
+                const respostaOutro = outro.querySelector(".resposta-faq");
+                const perguntaOutro = outro.querySelector(".pergunta-faq");
+                if (respostaOutro) {
+                    respostaOutro.style.maxHeight = null;
+                }
+                
+                if (perguntaOutro) {
+                    perguntaOutro.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            if (!estaAberto) {
+                item.classList.add("aberto");
+                pergunta.setAttribute("aria-expanded", "true");
+                resposta.style.maxHeight = resposta.scrollHeight + "px";
+            }
+        });
+    });
+}
+
 // --- INICIALIZAÇÃO AO CARREGAR A PÁGINA ---
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -424,6 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
     definirLinkInstagram();
     ajustarCabecalho();
     inicializarSelectsCustomizados();
+    inicializarFaq();
     window.addEventListener("scroll", ativarLinkMenu);
     ativarLinkMenu(); 
 
