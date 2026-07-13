@@ -171,7 +171,9 @@ function definirLinkInstagram() {
 
 // Fotos das tatuagens
 const galeriaFotos = [
-    { imagem: "../img/naka-tattos-img.jpg", legenda: "Trabalho autoral no estilo oriental" }
+    { imagem: "../img/tatto-img-1.jpg", legenda: "Trabalho autoral no estilo oriental" },
+    { imagem: "../img/tatto-img-2.jpg", legenda: "" },
+    { imagem: "../img/tatto-img-3.jpeg", legenda: "" }
 ];
 
 
