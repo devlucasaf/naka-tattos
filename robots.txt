@@ -1,0 +1,5 @@
+# PUBLICAÇÃO: substituir [DOMINIO] pelo endereço final do site.
+User-agent: *
+Allow: /
+
+Sitemap: https://[DOMINIO]/sitemap.xml
