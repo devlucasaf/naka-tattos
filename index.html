@@ -3,210 +3,508 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta name="description" content="Estúdio de tatuagem oriental - Arte sobre pele com tradição e modernidade">
-        <title>Naka Tattoo</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="src/styles/global.css">
+        <meta name="theme-color" content="#16171a">
+
+        <title>Naka Tattos — Tatuagem old school, oriental e preto e cinza em Brasília</title>
+        <meta name="description" content="Estúdio do tatuador Gustavo Nakandakari em Águas Claras, Brasília. Atendimento com hora marcada: envie a sua ideia e solicite um orçamento.">
+        <meta name="author" content="Gustavo Nakandakari">
+
+        <link rel="canonical" href="https://[DOMINIO]/">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="Naka Tattos">
+        <meta property="og:title" content="Naka Tattos — Tatuagem old school, oriental e preto e cinza">
+        <meta property="og:description" content="Atendimento com hora marcada em Águas Claras, Brasília. Envie a sua ideia e solicite um orçamento.">
+        <meta property="og:url" content="https://[DOMINIO]/">
+        <meta property="og:image" content="https://[DOMINIO]/src/img/naka-marca.png">
+        <meta property="og:image:alt" content="Marca do tatuador Naka Tattos">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Naka Tattos — Tatuagem old school, oriental e preto e cinza">
+        <meta name="twitter:description" content="Atendimento com hora marcada em Águas Claras, Brasília. Envie a sua ideia e solicite um orçamento.">
+        <meta name="twitter:image" content="https://[DOMINIO]/src/img/naka-marca.png">
+
+        <link rel="icon" href="src/img/naka-marca.png" type="image/png">
+        <link rel="apple-touch-icon" href="src/img/naka-marca.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+
+        <link rel="stylesheet" href="src/styles/base.css">
+        <link rel="stylesheet" href="src/styles/componentes.css">
+        <link rel="stylesheet" href="src/styles/secoes.css">
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "TattooParlor",
+            "name": "Naka Tattos",
+            "alternateName": "Gustavo Nakandakari",
+            "image": "src/img/naka-marca.png",
+            "telephone": "+5561992387016",
+            "email": "nakandakari.ttt13@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Pau Brasil, 10",
+                "addressLocality": "Águas Claras",
+                "addressRegion": "DF",
+                "postalCode": "71926-000",
+                "addressCountry": "BR"
+            },
+            "sameAs": [
+                "https://www.instagram.com/naka.tattoos",
+                "https://www.threads.com/@naka.tattoos",
+                "https://www.facebook.com/share/1BndRyHR6f/?mibextid=wwXlfr"
+            ]
+        }
+        </script>
     </head>
+
     <body>
+        <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-        <header class="cabecalho" id="cabecalho">
-            <div class="container-cabecalho">
-                <div class="logo">
-                    <span class="logo-principal">· 仲村渠グスタボ ·
-                        <span class="logo-texto">Naka Tattoo</span>
+        <svg class="sprite-icones" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icone-menu" viewBox="0 0 24 24">
+                <path d="M4 7h16M4 12h16M4 17h16"/>
+            </symbol>
+
+            <symbol id="icone-fechar" viewBox="0 0 24 24">
+                <path d="M6 6l12 12M18 6L6 18"/>
+            </symbol>
+
+            <symbol id="icone-chevron" viewBox="0 0 24 24">
+                <path d="M6 9.5l6 6 6-6"/>
+            </symbol>
+
+            <symbol id="icone-seta-esquerda" viewBox="0 0 24 24">
+                <path d="M19 12H5M11 18l-6-6 6-6"/>
+            </symbol>
+
+            <symbol id="icone-seta-direita" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </symbol>
+
+            <symbol id="icone-instagram" viewBox="0 0 24 24">
+                <rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/>
+                <circle cx="12" cy="12" r="4.1"/>
+                <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/>
+            </symbol>
+
+            <symbol id="icone-facebook" viewBox="0 0 24 24">
+                <path d="M14.6 21.5v-9h2.6l.5-3.2h-3.1V7.1c0-.9.3-1.6 1.7-1.6h1.6V2.6c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.4-4 4.1v2.7H9v3.2h2.6v9z"/>
+            </symbol>
+
+            <symbol id="icone-whatsapp" viewBox="0 0 24 24">
+                <path d="M20.4 11.7a8.4 8.4 0 0 1-12.5 7.4l-4.4 1.4 1.4-4.3a8.4 8.4 0 1 1 15.5-4.5z"/>
+                <path d="M9 9.4c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.4l.8 1.8c.1.2.1.4 0 .6l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.5.9 1.8 1 .2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.4.3.4.5v.5c0 .3-.2.7-.6 1-.4.3-1 .6-1.6.6-1.4 0-3.3-.8-4.9-2.2-1.6-1.4-2.7-3.3-2.9-4.6-.1-.9.1-1.6.4-2.1z"/>
+            </symbol>
+
+            <symbol id="icone-threads" viewBox="0 0 24 24">
+                <path d="M16.9 11.1a7.7 7.7 0 0 0-.3-.2c-.2-3.2-1.9-5.1-4.8-5.1h-.1c-1.7 0-3.2.8-4.1 2.2l1.6 1.1c.7-1 1.7-1.2 2.5-1.2.9 0 1.6.3 2.1.8.3.4.6 1 .7 1.7a13 13 0 0 0-2.9-.2c-2.9.2-4.8 1.9-4.7 4.2.1 1.2.7 2.2 1.7 2.9.8.5 1.9.8 3 .7 1.5-.1 2.7-.7 3.5-1.7.6-.8 1-1.8 1.2-3 .7.4 1.2 1 1.5 1.7.4 1.1.5 3-1 4.5-1.3 1.3-2.9 1.9-5.4 1.9-2.7 0-4.8-.9-6.1-2.6-1.2-1.6-1.9-3.9-1.9-6.9s.6-5.3 1.9-6.9C7.5 3.3 9.5 2.4 12.2 2.4c2.7 0 4.8.9 6.1 2.6.7.9 1.2 1.9 1.5 3.2l1.9-.5c-.4-1.6-1-2.9-1.9-4C18.2 1.5 15.7.4 12.3.4h-.1C8.8.4 6.3 1.5 4.6 3.7 3.1 5.7 2.3 8.5 2.3 12s.8 6.3 2.3 8.3c1.7 2.2 4.2 3.3 7.6 3.3h.1c3 0 5.1-.8 6.8-2.4 2.2-2.2 2.2-5 1.4-6.7-.6-1.3-1.6-2.3-3-3zm-4.3 5c-1.3.1-2.6-.5-2.7-1.7-.1-.9.6-1.9 2.7-2h.5c.8 0 1.5.1 2.1.2-.2 3-1.6 3.4-2.6 3.5z"/>
+            </symbol>
+
+            <symbol id="icone-email" viewBox="0 0 24 24">
+                <rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2"/>
+                <path d="M3.4 6.6L12 12.7l8.6-6.1"/>
+            </symbol>
+
+            <symbol id="icone-mapa" viewBox="0 0 24 24">
+                <path d="M12 21.5s7-5.8 7-11a7 7 0 0 0-14 0c0 5.2 7 11 7 11z"/>
+                <circle cx="12" cy="10.2" r="2.6"/>
+            </symbol>
+        </svg>
+
+        <header class="cabecalho" data-cabecalho>
+            <div class="container cabecalho__interno">
+                <a class="marca" href="index.html" aria-label="Naka Tattos — página inicial">
+                    <img 
+                        class="marca__logo" 
+                        src="src/img/naka-marca.png" 
+                        width="904" 
+                        height="1280" 
+                        alt=""
+                    >
+                    <span class="marca__texto">
+                        <span class="marca__nome">Naka Tattos</span>
+                        <span class="marca__kanji" lang="ja">仲村渠グスタボ</span>
                     </span>
-                    <span class="logo-detalhe">Gustavo Nakandakari</span>
-                </div>
+                </a>
 
-                <nav class="menu-navegacao">
-                    <ul class="lista-menu">
-                        <li><a href="index.html" class="link-menu ativo">Home</a></li>
-                        <li><a href="src/pages/galeria.html" class="link-menu">Galeria</a></li>
-                        <li><a href="src/pages/orcamento.html" class="link-menu">Orçamento</a></li>
-                        <li><a href="src/pages/faq.html" class="link-menu">FAQ</a></li>
-                        <li><a href="src/pages/contatos.html" class="link-menu">Contatos</a></li>
+                <nav class="cabecalho__nav" id="navPrincipal" data-aberto="false" aria-label="Navegação principal">
+                    <ul class="cabecalho__lista">
+                        <li><a class="cabecalho__link" href="index.html" aria-current="page">Início</a></li>
+                        <li><a class="cabecalho__link" href="src/pages/galeria.html">Galeria</a></li>
+                        <li><a class="cabecalho__link" href="src/pages/orcamento.html">Orçamento</a></li>
+                        <li><a class="cabecalho__link" href="src/pages/faq.html">Dúvidas</a></li>
+                        <li><a class="cabecalho__link" href="src/pages/contatos.html">Contatos</a></li>
                     </ul>
+                    <a class="botao botao--principal botao--compacto" href="src/pages/orcamento.html">Marcar horário</a>
                 </nav>
-                <div class="menu-hamburger" id="menuHamburger">
-                    <i class="fas fa-bars"></i>
+
+                <div class="cabecalho__acoes">
+                    <a class="botao botao--principal botao--compacto" href="src/pages/orcamento.html">Marcar horário</a>
+                    <button class="cabecalho__alternador" type="button" data-alternador-menu aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menu de navegação">
+                        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <use href="#icone-menu"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </header>
 
-        <main>
-            <section id="home" class="secao secao-home">
-                <div class="overlay-home"></div>
-                <div class="conteudo-home">
-                    <div class="home-texto">
-                        <h1 class="home-titulo">Tatuagem Old School, Oriental e Realismo Preto e Cinza<br> <span class="titulo-destaque"></span></h1>
-                        <div class="home-botoes">
-                            <a href="src/pages/contatos.html" class="botao botao-primario">
-                                Agendar sessão <i class="fas fa-arrow-right"></i>
+        <main id="conteudo">
+            <section class="hero" id="inicio">
+                <div class="container hero__interno">
+                    <div class="hero__texto-bloco">
+                        <p class="hero__etiqueta">Old school · Oriental · Preto e cinza</p>
+
+                        <h1 class="hero__titulo">
+                            A arte existe para que a 
+                            <em>realidade não nos destrua.</em>
+                        </h1>
+
+                        <p class="hero__texto">
+                            Atendimento só com hora marcada, em Águas Claras. Me conte a ideia,
+                            escolha o estilo e a gente fecha a data.
+                        </p>
+
+                        <div class="hero__acoes">
+                            <a class="botao botao--principal" href="src/pages/orcamento.html">
+                                Marcar horário
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-seta-direita"></use>
+                                </svg>
                             </a>
-                            <a href="src/pages/galeria.html" class="botao botao-secundario">
-                                Ver artes <i class="fab fa-instagram"></i>
-                            </a>
+                            <a class="botao botao--contorno" href="src/pages/galeria.html">Ver a galeria</a>
                         </div>
                     </div>
-                    <div class="home-emblema">
-                        <div class="circulo-dourado">
+
+                    <figure class="hero__figura">
+                        <img 
+                            class="hero__retrato" 
+                            src="src/img/naka-tattos-img.jpeg"
+                            width="960" 
+                            height="1280"
+                            alt="Gustavo Nakandakari, tatuador do Naka Tattos" 
+                            fetchpriority="high"
+                        />
+                        <span class="hero__selo">
                             <img 
                                 src="src/img/naka-marca.png" 
-                                alt="Naka Tattoo" 
-                                class="circulo-logo" 
-                                loading="lazy" 
+                                width="904" 
+                                height="1280" 
+                                alt="" 
+                                loading="lazy"
                             />
+                        </span>
+                    </figure>
+                </div>
+
+                <div class="container">
+                    <div class="assinatura revelar">
+                        <div>
+                            <h2 class="assinatura__nome">
+                                <span class="assinatura__kanji" lang="ja">仲村渠グスタボ</span>
+                                Gustavo Nakandakari
+                            </h2>
+                        </div>
+                        <div>
+                            <p class="assinatura__texto">
+                                Desenhos autorais, criados a partir da conversa com quem vai usar.
+                                Cada peça é pensada para a região do corpo em que vai ficar — do primeiro
+                                rascunho até o último traço.
+                            </p>
+                            <ul class="assinatura__especialidades">
+                                <li>Old school</li>
+                                <li>Oriental</li>
+                                <li>Realismo em preto e cinza</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SEÇÃO EXPLORE / NAVEGAÇÃO -->
-            <section id="explore" class="secao secao-explore">
-                <div class="container-largura">
-                    <div class="cabecalho-secao">
-                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
-                        <h2 class="titulo-secao">Explore</h2>
-                        <div class="linha-dourada"></div>
-                        <p class="subtitulo-secao">Navegue pelas páginas e conheça o meu trabalho</p>
+            <section class="secao secao--alternada" id="explorar" aria-labelledby="tituloExplorar">
+                <div class="container">
+                    <div class="secao__cabecalho revelar">
+                        <p class="secao__indice">01 — Navegue</p>
+                        <h2 class="secao__titulo" id="tituloExplorar">Por onde começar</h2>
                     </div>
 
-                    <div class="grade-navegacao">
-                        <a href="src/pages/galeria.html" class="card-navegacao">
-                            <i class="fas fa-images"></i>
-                            <h3>Galeria</h3>
-                            <p>Veja fotos das tatuagens já realizadas.</p>
-                            <span class="card-navegacao-cta">Ver galeria <i class="fas fa-arrow-right"></i></span>
+                    <div class="explorar revelar">
+                        <a class="explorar__item" href="src/pages/orcamento.html">
+                            <span class="explorar__numero">01</span>
+                            <span class="explorar__titulo">Orçamento</span>
+                            <svg class="icone explorar__seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <use href="#icone-seta-direita"></use>
+                            </svg>
+                            <span class="explorar__descricao">Mande a ideia com estilo, local e tamanho. É o caminho mais rápido para marcar.</span>
                         </a>
 
-                        <a href="src/pages/orcamento.html" class="card-navegacao">
-                            <i class="fas fa-pen-nib"></i>
-                            <h3>Orçamento</h3>
-                            <p>Envie a sua ideia e solicite um orçamento.</p>
-                            <span class="card-navegacao-cta">Solicitar <i class="fas fa-arrow-right"></i></span>
+                        <a class="explorar__item" href="src/pages/galeria.html">
+                            <span class="explorar__numero">02</span>
+                            <span class="explorar__titulo">Galeria</span>
+                            <svg class="icone explorar__seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <use href="#icone-seta-direita"></use>
+                            </svg>
+                            <span class="explorar__descricao">Fotos das peças finalizadas, em tamanho grande.</span>
                         </a>
 
-                        <a href="src/pages/contatos.html" class="card-navegacao">
-                            <i class="fas fa-comments"></i>
-                            <h3>Contatos</h3>
-                            <p>Fale comigo pelas redes e agende a sua sessão.</p>
-                            <span class="card-navegacao-cta">Entrar em contato <i class="fas fa-arrow-right"></i></span>
+                        <a class="explorar__item" href="src/pages/faq.html">
+                            <span class="explorar__numero">03</span>
+                            <span class="explorar__titulo">Dúvidas</span>
+                            <svg class="icone explorar__seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <use href="#icone-seta-direita"></use>
+                            </svg>
+                            <span class="explorar__descricao">Agendamento, referências, cobertura e cuidados antes e depois.</span>
+                        </a>
+
+                        <a class="explorar__item" href="src/pages/contatos.html">
+                            <span class="explorar__numero">04</span>
+                            <span class="explorar__titulo">Contatos</span>
+                            <svg class="icone explorar__seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <use href="#icone-seta-direita"></use>
+                            </svg>
+                            <span class="explorar__descricao">WhatsApp, redes sociais e onde fica o estúdio.</span>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- SEÇÃO SOBRE MIM -->
-            <section id="sobre" class="secao secao-sobre">
-                <div class="container-largura">
-                    <div class="cabecalho-secao">
-                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
-                        <h2 class="titulo-secao">Sobre mim</h2>
-                        <div class="linha-dourada"></div>
+            <section class="secao" id="trabalhos" aria-labelledby="tituloTrabalhos">
+                <div class="container">
+                    <div class="secao__cabecalho revelar">
+                        <p class="secao__indice">02 — Trabalhos</p>
+                        <h2 class="secao__titulo" id="tituloTrabalhos">Alguns traços</h2>
+                        <p class="secao__apoio">
+                            Uma amostra do que está na galeria. Toque em uma imagem para ampliar.
+                        </p>
                     </div>
-                    <div class="grade-sobre">
-                        <div class="sobre-imagem">
-                            <div class="moldura-imagem">
-                                <img 
-                                    src="src/img/naka-tattos-img.jpeg" 
-                                    alt="Tatuador profissional" 
-                                    loading="lazy"
+
+                    <div class="galeria__grade revelar" data-galeria>
+                        <figure class="galeria__item galeria__item--alto">
+                            <a class="galeria__botao" href="src/img/tatto-img-1.jpg" data-galeria-item
+                                data-legenda="Trabalho realizado por Naka Tattos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]">
+                                <img    
+                                    src="src/img/tatto-img-1.jpg" 
+                                    width="1440" 
+                                    height="1920" 
+                                    loading="lazy" 
+                                    decoding="async"
+                                    alt="Tatuagem finalizada por Naka Tattos, fotografada após a sessão"
                                 />
-                            </div>
-                        </div>
-                        <div class="sobre-conteudo">
-                            <h3 class="sobre-nome">Gustavo Nakandakari</h3>
-                            <p class="sobre-descricao">Sou especialista em <span class="destaque-vermelho">tatuagem tradicional</span> </p>
-                            <div class="caracteristicas">
-                                <div class="caracteristica-item">
-                                    <i class="fas fa-waveform"></i>
-                                    <span>Old School e Oriental</span>
-                                </div>
+                            </a>
+                        </figure>
 
-                                <div class="caracteristica-item">
-                                    <i class="fas fa-palette"></i>
-                                    <span>Preto e Cinza</span>
-                                </div>
+                        <figure class="galeria__item">
+                            <a class="galeria__botao" href="src/img/tatto-img-2.jpg" data-galeria-item
+                                data-legenda="Trabalho realizado por Naka Tattos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]">
+                                <img 
+                                    src="src/img/tatto-img-2.jpg" 
+                                    width="1440" 
+                                    height="1800" 
+                                    loading="lazy" 
+                                    decoding="async"
+                                    alt="Tatuagem em preto e cinza finalizada por Naka Tattos"
+                                />
+                            </a>
+                        </figure>
 
-                                <div class="caracteristica-item">
-                                    <i class="fas fa-hand-sparkles"></i>
-                                    <span>Realismo</span>
-                                </div>
-                            </div>
-                            <div class="citacao-sobre">
-                                <i class="fas fa-quote-left"></i> A arte existe para que a realidade não nos destrua.
-                            </div>
-                        </div>
+                        <figure class="galeria__item">
+                            <a class="galeria__botao" href="src/img/tatto-img-3.jpeg" data-galeria-item
+                                data-legenda="Trabalho realizado por Naka Tattos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]">
+                                <img 
+                                    src="src/img/tatto-img-3.jpeg" 
+                                    width="3137" 
+                                    height="4183" 
+                                    loading="lazy" 
+                                    decoding="async"
+                                    alt="Detalhe de tatuagem finalizada por Naka Tattos"
+                                />
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="galeria__rodape revelar">
+                        <p>As fotografias publicadas aqui são de autoria do estúdio.</p>
+                        <a class="botao botao--contorno botao--compacto" href="src/pages/galeria.html">
+                            Ver a galeria completa
+                            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <use href="#icone-seta-direita"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <!-- SEÇÃO CONTATOS -->
-            <section id="contato" class="secao secao-contato">
-                <div class="container-largura">
-                    <div class="cabecalho-secao">
-                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
-                        <h2 class="titulo-secao">Contatos</h2>
-                        <div class="linha-dourada"></div>
+            <section class="secao secao--alternada" id="legal" aria-labelledby="tituloLegal">
+                <div class="container">
+                    <div class="secao__cabecalho revelar">
+                        <p class="secao__indice">03 — Informações legais</p>
+                        <h2 class="secao__titulo" id="tituloLegal">Licenças e dados profissionais</h2>
+                        <p class="secao__apoio">
+                            Transparência sobre quem atende, onde atende e sob quais autorizações.
+                        </p>
                     </div>
-                    <div class="cta-contato">
-                        <h3 class="cta-contato-titulo">Pronto para sua próxima tatuagem?</h3>
-                        <p class="cta-contato-texto">Entre em contato para um orçamento personalizado e exclusivo</p>
-                        <div class="cta-contato-botoes">
-                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" class="botao botao-whatsapp">
-                                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                            </a>
-                            <a href="src/pages/contatos.html" class="botao botao-secundario">
-                                Ver todos os contatos <i class="fas fa-arrow-right"></i>
-                            </a>
+
+                    <div class="legal__grade revelar">
+                        <div class="legal__bloco">
+                            <h3>Profissional</h3>
+                            <ul class="legal__lista">
+                                <li><span class="legal__chave">Responsável técnico</span> Gustavo Nakandakari</li>
+                                <li><span class="legal__chave">Nome artístico</span> Naka Tattos</li>
+                            </ul>
+                        </div>
+
+                        <div class="legal__bloco">
+                            <h3>Estúdio</h3>
+                            <ul class="legal__lista">
+                                <li><span class="legal__chave">Nome</span> <span class="marcador-pendente">TRTW Tattoo Parlour</span></li>
+                                <li><span class="legal__chave">Endereço profissional</span> <span data-texto="endereco">Av. Pau Brasil, 10 — Águas Claras, Brasília/DF, 71926-000</span></li>
+                                <li><span class="legal__chave">Atendimento</span> Somente com hora marcada</li>
+                            </ul>
+                        </div>
+
+                        <div class="legal__bloco">
+                            <h3>Imagens e direitos autorais</h3>
+                            <ul class="legal__lista">
+                                <li>
+                                    As artes e fotografias publicadas neste site são de autoria do estúdio e não
+                                    podem ser reproduzidas, copiadas ou reutilizadas sem autorização por escrito.
+                                </li>
+                                <li>
+                                    Para solicitar a retirada de uma imagem, escreva para
+                                    <a data-link="email" href="mailto:nakandakari.ttt13@gmail.com">
+                                        <span data-texto="email">nakandakari.ttt13@gmail.com</span>
+                                    </a>.
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                    <p class="legal__nota">
+                        Os campos entre colchetes precisam ser preenchidos com os dados oficiais antes da
+                        publicação. Nenhum número, registro ou informação sanitária foi presumido nesta página.
+                    </p>
                 </div>
             </section>
         </main>
 
         <footer class="rodape">
-            <div class="container-rodape">
-                <div class="rodape-conteudo">
-                    <div class="rodape-logo">
-                        <span>仲村渠グスタボ Naka Tattoos</span>
-                        <small>Artes sobre a pele</small>
+            <div class="container">
+                <div class="rodape__topo">
+                    <div>
+                        <a class="marca" href="index.html" aria-label="Naka Tattos — página inicial">
+                            <img 
+                                class="marca__logo" 
+                                src="src/img/naka-marca.png" 
+                                width="904" 
+                                height="1280" 
+                                alt="" 
+                                loading="lazy"
+                            />
+                            <span class="marca__texto">
+                                <span class="marca__nome">Naka Tattos</span>
+                                <span class="marca__kanji" lang="ja">仲村渠グスタボ</span>
+                            </span>
+                        </a>
+                        <p class="rodape__descricao">
+                            Old school, oriental e realismo em preto e cinza. Atendimento com hora marcada
+                            em Águas Claras, Brasília.
+                        </p>
                     </div>
-                    <div class="rodape-central">
-                        <div class="rodape-links">
-                            <a href="index.html">Home</a>
-                            <a href="galeria.html">Galeria</a>
-                            <a href="orcamento.html">Orçamento</a>
-                            <a href="faq.html">FAQ</a>
-                            <a href="contatos.html">Contato</a>
+
+                    <nav aria-labelledby="tituloLinksRodape">
+                        <h2 class="rodape__titulo" id="tituloLinksRodape">Navegação</h2>
+                        <ul class="rodape__lista">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="src/pages/galeria.html">Galeria</a></li>
+                            <li><a href="src/pages/orcamento.html">Orçamento</a></li>
+                            <li><a href="src/pages/faq.html">Dúvidas</a></li>
+                            <li><a href="src/pages/contatos.html">Contatos</a></li>
+                            <li><a href="index.html#legal">Informações legais</a></li>
+                            <li><a href="src/pages/privacidade.html">Política de Privacidade</a></li>
+                        </ul>
+                    </nav>
+
+                    <div>
+                        <h2 class="rodape__titulo">Contato</h2>
+                        <div class="rodape__contato">
+                            <a data-link="whatsapp" href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener noreferrer">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-whatsapp"></use>
+                                </svg>
+                                <span data-texto="whatsapp">(61) 99238-7016</span>
+                            </a>
+                            <a data-link="email" href="mailto:nakandakari.ttt13@gmail.com">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-email"></use>
+                                </svg>
+                                <span data-texto="email">nakandakari.ttt13@gmail.com</span>
+                            </a>
+                            <a data-link="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Pau+Brasil,+10+-+%C3%81guas+Claras,+Bras%C3%ADlia+-+DF,+71926-000"
+                            target="_blank" rel="noopener noreferrer">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-mapa"></use>
+                                </svg>
+                                <span data-texto="endereco">Av. Pau Brasil, 10 — Águas Claras, Brasília/DF</span>
+                            </a>
                         </div>
-                        <div class="rodape-social">
-                            <a href="https://www.instagram.com/naka.tattoos" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/share/1BndRyHR6f/?mibextid=wwXlfr" target="_blank" rel="noopener" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.threads.com/@naka.tattoos" target="_blank" rel="noopener" aria-label="Threads">
-                                <i class="fab fa-threads"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="mailto:nakandakari.ttt13@gmail.com" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+
+                        <h2 class="rodape__titulo rodape__titulo--redes">Redes</h2>
+                        <ul class="rodape__sociais" data-redes></ul>
                     </div>
-                    <div class="rodape-copyright">
-                        <p>© 2026 Gustavo Nakandakari. Todos os direitos reservados.</p>
-                    </div>
+                </div>
+
+                <div class="rodape__base">
+                    <p>© <span data-ano>2026</span> Gustavo Nakandakari. Todos os direitos reservados.</p>
+                    <p>
+                        <a href="src/pages/privacidade.html">Política de Privacidade</a>
+                    </p>
                 </div>
             </div>
         </footer>
 
-        <script src="src/js/script.js"></script>
+        <div class="modal" id="lightbox" data-aberto="false" role="dialog" aria-modal="true" aria-label="Visualização ampliada da galeria" aria-hidden="true">
+            <button class="modal__botao modal__fechar" type="button" data-lightbox-fechar aria-label="Fechar visualização">
+                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <use href="#icone-fechar"></use>
+                </svg>
+            </button>
+
+            <div class="modal__conteudo">
+                <figure class="modal__figura">
+                    <img 
+                        class="modal__imagem"
+                        src="" 
+                        alt="" 
+                        data-lightbox-imagem
+                    />
+                    <figcaption class="modal__legenda" data-lightbox-legenda></figcaption>
+                </figure>
+
+                <p class="modal__contador" data-lightbox-contador></p>
+
+                <div class="modal__navegacao">
+                    <button class="modal__botao" type="button" data-lightbox-anterior aria-label="Imagem anterior">
+                        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <use href="#icone-seta-esquerda"></use>
+                        </svg>
+                    </button>
+
+                    <button class="modal__botao" type="button" data-lightbox-proximo aria-label="Próxima imagem">
+                        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <use href="#icone-seta-direita"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="src/js/config.js" defer></script>
+        <script src="src/js/components/contatos.js" defer></script>
+        <script src="src/js/components/navegacao.js" defer></script>
+        <script src="src/js/components/galeria.js" defer></script>
+        <script src="src/js/main.js" defer></script>
     </body>
 </html>

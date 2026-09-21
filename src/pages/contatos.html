@@ -1,110 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Naka Tatto | Contatos</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="../styles/global.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="theme-color" content="#16171a">
+
+        <title>Contatos — Naka Tattos</title>
+        <meta name="description" content="WhatsApp, e-mail, redes sociais e localização do estúdio de Gustavo Nakandakari em Águas Claras, Brasília.">
+
+        <link rel="canonical" href="https://[DOMINIO]/src/pages/contatos.html">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="Naka Tattos">
+        <meta property="og:title" content="Contatos — Naka Tattos">
+        <meta property="og:description" content="Fale comigo pelo WhatsApp, e-mail ou redes sociais. Atendimento com hora marcada.">
+        <meta property="og:url" content="https://[DOMINIO]/src/pages/contatos.html">
+        <meta property="og:image" content="https://[DOMINIO]/src/img/naka-marca.png">
+
+        <link rel="icon" href="../img/naka-marca.png" type="image/png">
+        <link rel="apple-touch-icon" href="../img/naka-marca.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/componentes.css">
+        <link rel="stylesheet" href="../styles/secoes.css">
     </head>
+
     <body>
-        <header class="cabecalho" id="cabecalho">
-            <div class="container-cabecalho">
-                <a href="../../index.html" class="logo">
-                    <span class="logo-principal">· 仲村渠グスタボ ·
-                        <span class="logo-texto">Naka Tattoo</span>
+        <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+        <svg class="sprite-icones" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="icone-menu" viewBox="0 0 24 24">
+                <path d="M4 7h16M4 12h16M4 17h16"/>
+            </symbol>
+
+            <symbol id="icone-seta-direita" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </symbol>
+
+            <symbol id="icone-relogio" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7.2V12l3.2 2"/>
+            </symbol>
+
+            <symbol id="icone-instagram" viewBox="0 0 24 24">
+                <rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5"/>
+                <circle cx="12" cy="12" r="4.1"/>
+                <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/>
+            </symbol>
+
+            <symbol id="icone-facebook" viewBox="0 0 24 24">
+                <path d="M14.6 21.5v-9h2.6l.5-3.2h-3.1V7.1c0-.9.3-1.6 1.7-1.6h1.6V2.6c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.4-4 4.1v2.7H9v3.2h2.6v9z"/>
+            </symbol>
+
+            <symbol id="icone-whatsapp" viewBox="0 0 24 24">
+                <path d="M20.4 11.7a8.4 8.4 0 0 1-12.5 7.4l-4.4 1.4 1.4-4.3a8.4 8.4 0 1 1 15.5-4.5z"/>
+                <path d="M9 9.4c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.4l.8 1.8c.1.2.1.4 0 .6l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.7 1.5.9 1.8 1 .2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.4.3.4.5v.5c0 .3-.2.7-.6 1-.4.3-1 .6-1.6.6-1.4 0-3.3-.8-4.9-2.2-1.6-1.4-2.7-3.3-2.9-4.6-.1-.9.1-1.6.4-2.1z"/>
+            </symbol>
+
+            <symbol id="icone-threads" viewBox="0 0 24 24">
+                <path d="M16.9 11.1a7.7 7.7 0 0 0-.3-.2c-.2-3.2-1.9-5.1-4.8-5.1h-.1c-1.7 0-3.2.8-4.1 2.2l1.6 1.1c.7-1 1.7-1.2 2.5-1.2.9 0 1.6.3 2.1.8.3.4.6 1 .7 1.7a13 13 0 0 0-2.9-.2c-2.9.2-4.8 1.9-4.7 4.2.1 1.2.7 2.2 1.7 2.9.8.5 1.9.8 3 .7 1.5-.1 2.7-.7 3.5-1.7.6-.8 1-1.8 1.2-3 .7.4 1.2 1 1.5 1.7.4 1.1.5 3-1 4.5-1.3 1.3-2.9 1.9-5.4 1.9-2.7 0-4.8-.9-6.1-2.6-1.2-1.6-1.9-3.9-1.9-6.9s.6-5.3 1.9-6.9C7.5 3.3 9.5 2.4 12.2 2.4c2.7 0 4.8.9 6.1 2.6.7.9 1.2 1.9 1.5 3.2l1.9-.5c-.4-1.6-1-2.9-1.9-4C18.2 1.5 15.7.4 12.3.4h-.1C8.8.4 6.3 1.5 4.6 3.7 3.1 5.7 2.3 8.5 2.3 12s.8 6.3 2.3 8.3c1.7 2.2 4.2 3.3 7.6 3.3h.1c3 0 5.1-.8 6.8-2.4 2.2-2.2 2.2-5 1.4-6.7-.6-1.3-1.6-2.3-3-3zm-4.3 5c-1.3.1-2.6-.5-2.7-1.7-.1-.9.6-1.9 2.7-2h.5c.8 0 1.5.1 2.1.2-.2 3-1.6 3.4-2.6 3.5z"/>
+            </symbol>
+
+            <symbol id="icone-email" viewBox="0 0 24 24">
+                <rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2"/>
+                <path d="M3.4 6.6L12 12.7l8.6-6.1"/>
+            </symbol>
+
+            <symbol id="icone-mapa" viewBox="0 0 24 24">
+                <path d="M12 21.5s7-5.8 7-11a7 7 0 0 0-14 0c0 5.2 7 11 7 11z"/>
+                <circle cx="12" cy="10.2" r="2.6"/>
+            </symbol>
+        </svg>
+
+        <header class="cabecalho" data-cabecalho>
+            <div class="container cabecalho__interno">
+                <a class="marca" href="../../index.html" aria-label="Naka Tattos — página inicial">
+                    <img 
+                        class="marca__logo" 
+                        src="../img/naka-marca.png" 
+                        width="904" 
+                        height="1280" 
+                        alt=""
+                    />
+                    <span class="marca__texto">
+                        <span class="marca__nome">Naka Tattos</span>
+                        <span class="marca__kanji" lang="ja">仲村渠グスタボ</span>
                     </span>
-                    <span class="logo-detalhe">Gustavo Nakandakari</span>
                 </a>
 
-                <nav class="menu-navegacao">
-                    <ul class="lista-menu">
-                        <li><a href="../../index.html" class="link-menu">Home</a></li>
-                        <li><a href="galeria.html" class="link-menu">Galeria</a></li>
-                        <li><a href="orcamento.html" class="link-menu">Orçamento</a></li>
-                        <li><a href="faq.html" class="link-menu">FAQ</a></li>
-                        <li><a href="contatos.html" class="link-menu ativo">Contatos</a></li>
+                <nav class="cabecalho__nav" id="navPrincipal" data-aberto="false" aria-label="Navegação principal">
+                    <ul class="cabecalho__lista">
+                        <li><a class="cabecalho__link" href="../../index.html">Início</a></li>
+                        <li><a class="cabecalho__link" href="galeria.html">Galeria</a></li>
+                        <li><a class="cabecalho__link" href="orcamento.html">Orçamento</a></li>
+                        <li><a class="cabecalho__link" href="faq.html">Dúvidas</a></li>
+                        <li><a class="cabecalho__link" href="contatos.html" aria-current="page">Contatos</a></li>
                     </ul>
+                    <a class="botao botao--principal botao--compacto" href="orcamento.html">Marcar horário</a>
                 </nav>
 
-                <div class="menu-hamburger" id="menuHamburger">
-                    <i class="fas fa-bars"></i>
+                <div class="cabecalho__acoes">
+                    <a class="botao botao--principal botao--compacto" href="orcamento.html">Marcar horário</a>
+                    <button class="cabecalho__alternador" type="button" data-alternador-menu
+                            aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menu de navegação">
+                        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <use href="#icone-menu"></use>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </header>
 
-        <main>
-            <section class="secao secao-contato">
-                <div class="container-largura">
-                    <div class="cabecalho-secao">
-                        <span class="etiqueta-secao">· 仲村渠グスタボ ·</span>
-                        <h2 class="titulo-secao">Entre em Contato</h2>
-                        <div class="linha-dourada"></div>
+        <main id="conteudo">
+            <section class="secao secao--topo" aria-labelledby="tituloContatos">
+                <div class="container">
+                    <div class="secao__cabecalho">
+                        <p class="secao__indice">Contatos</p>
+                        <h1 class="secao__titulo" id="tituloContatos">Onde me achar</h1>
+                        <p class="secao__apoio">
+                            O caminho mais rápido é o WhatsApp. O atendimento é sempre com hora marcada.
+                        </p>
                     </div>
 
-                    <div class="contato-com-mapa">
-                        <div class="info-contato-vertical">
-                            <a href="https://www.google.com/maps/place/Le+Quartier+%C3%81guas+Claras/data=!4m2!3m1!1s0x0:0xa1630dbaaeceb765?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener" class="card-info card-info-linha">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="card-info-texto">
-                                    <h4>Endereço</h4>
-                                    <p>Av. Pau Brasil, 10 - Águas Claras, Brasília - DF, 71926-000<br>Brasília - DF</p>
-                                </div>
-                            </a>
-
-                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" class="card-info card-info-linha">
-                                <i class="fab fa-whatsapp"></i>
-                                <div class="card-info-texto">
-                                    <h4>WhatsApp</h4>
-                                    <p>(61) 99238-7016</p>
-                                </div>
-                            </a>
-
-                            <a href="mailto:nakandakari.ttt13@gmail.com" class="card-info card-info-linha">
-                                <i class="far fa-envelope"></i>
-                                <div class="card-info-texto">
-                                    <h4>E-mail</h4>
-                                    <p>nakandakari.ttt13@gmail.com</p>
-                                </div>
-                            </a>
-
-                            <a href="https://www.instagram.com/naka.tattoos" target="_blank" rel="noopener" class="card-info card-info-linha">
-                                <i class="fab fa-instagram"></i>
-                                <div class="card-info-texto">
-                                    <h4>Instagram</h4>
-                                    <p>@naka.tattoos</p>
-                                </div>
-                            </a>
-
-                            <a href="https://www.facebook.com/share/1BndRyHR6f/?mibextid=wwXlfr" target="_blank" rel="noopener" class="card-info card-info-linha">
-                                <i class="fab fa-facebook"></i>
-                                <div class="card-info-texto">
-                                    <h4>Facebook</h4>
-                                    <p>@nakandakari_ttt</p>
-                                </div>
-                            </a>
-
-                            <div class="card-info card-info-linha">
-                                <i class="fas fa-clock"></i>
-                                <div class="card-info-texto">
-                                    <h4>Horário</h4>
-                                    <p>Somente com hora marcada</p>
-                                </div>
-                            </div>
+                    <div class="contatos__grade">
+                        <div class="revelar">
+                            <ul class="contatos__lista" data-contatos-lista>
+                                <li class="contato-item">
+                                    <a class="contato-item__link" href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <use href="#icone-whatsapp"></use>
+                                        </svg>
+                                        <span class="contato-item__rotulo">WhatsApp</span>
+                                        <span class="contato-item__valor">(61) 99238-7016</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="mapa-contato">
+                        <div class="mapa revelar">
                             <iframe
                                 src="https://maps.google.com/maps?q=Av.%20Pau%20Brasil%2C%2010%20-%20%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF%2C%2071926-000&z=16&output=embed"
-                                width="100%"
-                                height="100%"
-                                style="border:0;"
-                                allowfullscreen=""
+                                title="Mapa com a localização do estúdio em Águas Claras, Brasília"
                                 loading="lazy"
-                                title="Localização do estúdio"
-                            >
+                                allowfullscreen>
                             </iframe>
+                        </div>
+                    </div>
+
+                    <div class="chamada revelar">
+                        <div>
+                            <h2 class="chamada__titulo">Já sabe o que quer tatuar?</h2>
+                            <p class="chamada__texto">
+                                Preencha o orçamento com estilo, local e tamanho — assim o retorno já vem completo.
+                            </p>
+                        </div>
+                        <div class="chamada__acoes">
+                            <a class="botao botao--principal" href="orcamento.html">
+                                Marcar horário
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icone-seta-direita"></use></svg>
+                            </a>
+                            <a class="botao botao--contorno" href="galeria.html">Ver a galeria</a>
                         </div>
                     </div>
                 </div>
@@ -112,46 +171,82 @@
         </main>
 
         <footer class="rodape">
-            <div class="container-rodape">
-                <div class="rodape-conteudo">
-                    <div class="rodape-logo">
-                        <span>仲村渠グスタボ Naka Tattoos</span>
-                        <small>Artes sobre a pele</small>
+            <div class="container">
+                <div class="rodape__topo">
+                    <div>
+                        <a class="marca" href="../../index.html" aria-label="Naka Tattos — página inicial">
+                            <img 
+                                class="marca__logo" 
+                                src="../img/naka-marca.png" 
+                                width="904" 
+                                height="1280" 
+                                alt="" 
+                                loading="lazy"
+                            />
+                            <span class="marca__texto">
+                                <span class="marca__nome">Naka Tattos</span>
+                                <span class="marca__kanji" lang="ja">仲村渠グスタボ</span>
+                            </span>
+                        </a>
+                        <p class="rodape__descricao">
+                            Old school, oriental e realismo em preto e cinza. Atendimento com hora marcada
+                            em Águas Claras, Brasília.
+                        </p>
                     </div>
-                    <div class="rodape-central">
-                        <div class="rodape-links">
-                            <a href="../../index.html">Home</a>
-                            <a href="galeria.html">Galeria</a>
-                            <a href="orcamento.html">Orçamento</a>
-                            <a href="faq.html">FAQ</a>
-                            <a href="contatos.html">Contato</a>
+
+                    <nav aria-labelledby="tituloLinksRodape">
+                        <h2 class="rodape__titulo" id="tituloLinksRodape">Navegação</h2>
+                        <ul class="rodape__lista">
+                            <li><a href="../../index.html">Início</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="orcamento.html">Orçamento</a></li>
+                            <li><a href="faq.html">Dúvidas</a></li>
+                            <li><a href="contatos.html">Contatos</a></li>
+                            <li><a href="../../index.html#legal">Informações legais</a></li>
+                            <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        </ul>
+                    </nav>
+
+                    <div>
+                        <h2 class="rodape__titulo">Contato</h2>
+                        <div class="rodape__contato">
+                            <a data-link="whatsapp" href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener noreferrer">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-whatsapp"></use>
+                                </svg>
+                                <span data-texto="whatsapp">(61) 99238-7016</span>
+                            </a>
+                            <a data-link="email" href="mailto:nakandakari.ttt13@gmail.com">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-email"></use>
+                                </svg>
+                                <span data-texto="email">nakandakari.ttt13@gmail.com</span>
+                            </a>
+                            <a data-link="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Pau+Brasil,+10+-+%C3%81guas+Claras,+Bras%C3%ADlia+-+DF,+71926-000" target="_blank" rel="noopener noreferrer">
+                                <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <use href="#icone-mapa"></use>
+                                </svg>
+                                <span data-texto="endereco">Av. Pau Brasil, 10 — Águas Claras, Brasília/DF</span>
+                            </a>
                         </div>
-                        <div class="rodape-social">
-                            <a href="https://www.instagram.com/naka.tattoos" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/share/1BndRyHR6f/?mibextid=wwXlfr" target="_blank" rel="noopener" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.threads.com/@naka.tattoos" target="_blank" rel="noopener" aria-label="Threads">
-                                <i class="fab fa-threads"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/message/TLLHO6BXFIZGD1" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="mailto:nakandakari.ttt13@gmail.com" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+
+                        <h2 class="rodape__titulo rodape__titulo--redes">Redes</h2>
+                        <ul class="rodape__sociais" data-redes></ul>
                     </div>
-                    <div class="rodape-copyright">
-                        <p>© 2026 Gustavo Nakandakari. Todos os direitos reservados.</p>
-                    </div>
+                </div>
+
+                <div class="rodape__base">
+                    <p>© <span data-ano>2026</span> Gustavo Nakandakari. Todos os direitos reservados.</p>
+                    <p>
+                        <a href="privacidade.html">Política de Privacidade</a>
+                    </p>
                 </div>
             </div>
         </footer>
 
-        <script src="../js/script.js"></script>
+        <script src="../js/config.js" defer></script>
+        <script src="../js/components/contatos.js" defer></script>
+        <script src="../js/components/navegacao.js" defer></script>
+        <script src="../js/main.js" defer></script>
     </body>
 </html>
-
