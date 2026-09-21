@@ -3,120 +3,113 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-
 # 仲村渠グスタボ Naka Tattos
 
-Site profissional do tatuador **Gustavo Nakandakari**, especializado em tatuagem Old School, Oriental e Realismo Preto e Cinza.
+Landing page do tatuador **Gustavo Nakandakari**, especializado em Old School, Oriental e Realismo em preto e cinza.
 
 ## 🔗 Acesse
 
 > _Em breve — deploy via GitHub Pages_
 
-## 📸 Sobre o Projeto
+## 📸 Sobre o projeto
 
-Landing page desenvolvida para divulgar o trabalho do Gustavo Nakandakari, com integração de posts do Instagram e formulário de contato.
+Site multipágina, sem build e sem framework, construído para um objetivo: fazer o visitante marcar um horário.
 
-### Seções
+### Páginas
 
-- **Home** — Apresentação com chamada para agendamento
-- **Sobre mim** — Trajetória e diferenciais do artista
-- **Minhas Artes** — Galeria com imagens e embeds de posts do Instagram
-- **Contatos** — Formulário de mensagem, WhatsApp, e-mail e redes sociais
+| Página | Arquivo | Conteúdo |
+| --- | --- | --- |
+| Início | `index.html` | Hero, assinatura do artista, atalhos para as seções, prévia da galeria e informações legais |
+| Orçamento | `src/pages/orcamento.html` | Formulário com validação, dropdowns customizados e upload opcional de referências |
+| Galeria | `src/pages/galeria.html` | Fotos com lazy loading e lightbox acessível |
+| Dúvidas | `src/pages/faq.html` | Accordion acessível com as perguntas frequentes |
+| Contatos | `src/pages/contatos.html` | WhatsApp, redes sociais, endereço e mapa |
+| Privacidade | `privacidade.html` | Política de Privacidade |
+
+Todas as páginas compartilham o mesmo cabeçalho, rodapé, CSS e componentes JavaScript.
 
 ## 🛠️ Tecnologias
 
-<div align="center">
-    <img 
-        alt="JavaScript" 
-        title="JavaScript" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=javascript" 
-    />
-    <img 
-        alt="HTML" 
-        title="HTML" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=html" 
-    />
-    <img 
-        alt="CSS" 
-        title="CSS" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=css" 
-    />
-    <img 
-        alt="Git" 
-        title="Git" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=git" 
-    />
-    <img 
-        alt="GitHub" 
-        title="GitHub" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=github" 
-    />
-    <img 
-        alt="VS Code" 
-        title="VS Code" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=vscode" 
-    />
-    <img 
-        alt="Instagram" 
-        title="Instagram" 
-        width="40px" 
-        style="padding: 5px;" 
-        src="https://skillicons.dev/icons?i=instagram" 
-    />
-</div>
+HTML semântico, CSS moderno (grid, custom properties, `clamp()`) e JavaScript sem dependências.
+Única dependência externa: **Google Fonts** (Inter + Cormorant Garamond). Os ícones são SVG inline.
 
 ## 📁 Estrutura
 
 ```
 naka-tattos/
-├── index.html
-├── README.md
-├── src/
-│   ├── js/
-│   │    └── script.js
-│   ├── pages/
-│   │    ├── galeria.html
-│   │    ├── orcamento.html
-│   │    ├── estudio.html
-│   │    └── contatos.html
-│   └── styles/
-        └── global.css
+├── index.html                → home
+├── privacidade.html          → política de privacidade
+├── robots.txt
+├── sitemap.xml
+└── src/
+    ├── img/                  → logo e fotos
+    ├── pages/
+    │   ├── orcamento.html
+    │   ├── galeria.html
+    │   ├── faq.html
+    │   └── contatos.html
+    ├── styles/
+    │   ├── base.css          → tokens, reset, tipografia, utilitários
+    │   ├── componentes.css   → botões, campos, select, accordion, modal
+    │   └── secoes.css        → cabeçalho, hero, seções e rodapé
+    └── js/
+        ├── config.js         → contatos, redes sociais e modo de envio
+        ├── main.js           → inicialização
+        ├── services/
+        │   └── envio-orcamento.js
+        └── components/
+            ├── contatos.js
+            ├── navegacao.js
+            ├── select-custom.js
+            ├── formulario-orcamento.js
+            ├── galeria.js
+            └── faq.js
 ```
 
-## 🚀 Como usar
+Cada página carrega apenas os componentes que usa.
+
+## 🚀 Como executar
 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/devlucasaf/naka-tattos.git
    ```
-2. Abra o `index.html` no navegador ou use uma extensão como **Live Server** no VS Code.
+2. Abra o `index.html` no navegador ou use a extensão **Live Server** no VS Code.
 
-## 📌 Posts do Instagram
+Não há dependências para instalar nem etapa de build.
 
-Para exibir posts reais na galeria, edite o array `artesInstagram` em `js/script.js` e adicione itens com o shortcode do post:
+## ⚙️ Configuração
+
+Todos os contatos e links de redes sociais ficam em **`src/js/config.js`**. Alterar lá atualiza o site inteiro.
+
+### Envio do formulário de orçamento
+
+O envio fica isolado em `src/js/servicos/envio-orcamento.js` e tem dois modos:
+
+| Modo | Comportamento |
+| --- | --- |
+| `whatsapp` _(padrão)_ | Monta a mensagem e abre a conversa no WhatsApp. Não há simulação de envio. |
+| `endpoint` | Faz `POST` multipart para a URL informada, já incluindo as imagens de referência. |
+
+Para usar um backend, em `src/js/config.js`:
 
 ```js
-{ tipo: 'instagram', shortcode: 'SHORTCODE_DO_POST', legenda: 'Descrição' }
+envio: {
+    modo: 'endpoint',
+    endpoint: 'https://sua-api/orcamentos'
+}
 ```
 
-O shortcode é o código que aparece na URL do post:
-`https://www.instagram.com/p/DVbgNwAAApi/` → shortcode: `DVbgNwAAApi`
+## ✅ Pendências antes de publicar
+
+- Substituir `[DOMINIO]` em `index.html`, `privacidade.html`, nas páginas de `src/pages/`, no `robots.txt` e no `sitemap.xml`.
+- Preencher os campos entre colchetes nas **Informações legais**, no **FAQ** e na **Política de Privacidade**.
+- Trocar os espaços `[FOTO A SER ADICIONADA]` da galeria por fotos reais e escrever as legendas.
+- Revisar a Política de Privacidade com um responsável legal.
 
 ## 📝 Licença
 
-``Este projeto é de uso pessoal do Gustavo Nakamandari. Todos os direitos reservados.``
+``Este projeto é de uso pessoal do Gustavo Nakandakari. Todos os direitos reservados.``
 [LICENSE](./LICENSE)
 
 <img 
