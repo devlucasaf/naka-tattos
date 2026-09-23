@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: devlucasaf/naka-tattos
+  branch: main
+  base_url: https://SUBSTITUA-PELO-SEU-PROXY-OAUTH.vercel.app
+  auth_endpoint: auth
+
+media_folder: "src/img"
+public_folder: "src/img"
+
+publish_mode: simple
+
+collections:
+  - name: "galeria"
+    label: "Galeria de Tatuagens"
+    files:
+      - name: "itens"
+        label: "Fotos da Galeria"
+        file: "src/data/galeria.json"
+        fields:
+          - label: "Fotos"
+            name: "itens"
+            widget: "list"
+            label_singular: "Foto"
+            summary: "{{fields.legenda}}"
+            fields:
+              - { label: "Imagem", name: "arquivo", widget: "image" }
+              - { label: "Legenda (aparece ao ampliar a foto)", name: "legenda", widget: "string", default: "Trabalho realizado por Naka Tattoos" }
+              - { label: "Texto alternativo (descrição da foto para acessibilidade)", name: "alt", widget: "string", default: "Tatuagem finalizada por Naka Tattoos" }
+              - { label: "Mostrar na página inicial (destaque)", name: "destaque", widget: "boolean", default: false }
+              - { label: "Largura da imagem em pixels (opcional)", name: "largura", widget: "number", required: false, value_type: "int" }
+              - { label: "Altura da imagem em pixels (opcional)", name: "altura", widget: "number", required: false, value_type: "int" }

@@ -1,0 +1,28 @@
+{
+    "itens": [
+        {
+            "arquivo": "src/img/tatto-img-1.jpg",
+            "alt": "Tatuagem finalizada por Naka Tattoos, fotografada após a sessão",
+            "legenda": "Trabalho realizado por Naka Tattoos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]",
+            "largura": 1440,
+            "altura": 1920,
+            "destaque": true
+        },
+        {
+            "arquivo": "src/img/tatto-img-2.jpg",
+            "alt": "Tatuagem em preto e cinza finalizada por Naka Tattoos",
+            "legenda": "Trabalho realizado por Naka Tattoos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]",
+            "largura": 1440,
+            "altura": 1800,
+            "destaque": true
+        },
+        {
+            "arquivo": "src/img/tatto-img-3.jpeg",
+            "alt": "Detalhe de tatuagem finalizada por Naka Tattoos",
+            "legenda": "Trabalho realizado por Naka Tattoos — [DESCRIÇÃO DA PEÇA A SER PREENCHIDA]",
+            "largura": 3137,
+            "altura": 4183,
+            "destaque": true
+        }
+    ]
+}
