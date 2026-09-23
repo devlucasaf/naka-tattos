@@ -66,6 +66,15 @@
     background-color: var(--dourado-claro);
 }
 
+.botao--principal .icone {
+    transition: transform var(--transicao);
+}
+
+.botao--principal:hover .icone,
+.botao--principal:focus-visible .icone {
+    transform: translateX(4px);
+}
+
 .botao--contorno {
     border-color: var(--grafite-claro);
     color: var(--texto);
