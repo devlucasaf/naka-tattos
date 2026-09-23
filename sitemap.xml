@@ -6,27 +6,27 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://[DOMINIO]/src/pages/orcamento.html</loc>
+        <loc>https://[DOMINIO]/pages/orcamento/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://[DOMINIO]/src/pages/galeria.html</loc>
+        <loc>https://[DOMINIO]/pages/galeria/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://[DOMINIO]/src/pages/faq.html</loc>
+        <loc>https://[DOMINIO]/pages/faq/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://[DOMINIO]/src/pages/contatos.html</loc>
+        <loc>https://[DOMINIO]/pages/contatos/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://[DOMINIO]/src/pages/privacidade.html</loc>
+        <loc>https://[DOMINIO]/pages/privacidade/</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
