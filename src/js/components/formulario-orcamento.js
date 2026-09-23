@@ -379,7 +379,7 @@
                             NAKA.config.contato.whatsappUrl +
                             '" target="_blank" rel="noopener noreferrer">WhatsApp</a>.'
                     );
-                    console.error('[Naka Tattos] Falha no envio do orçamento:', erro.message);
+                    console.error('[Naka Tattoos] Falha no envio do orçamento:', erro.message);
                 })
                 .then(function () {
                     definirCarregando(false);

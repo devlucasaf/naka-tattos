@@ -90,7 +90,7 @@
                         externo +
                         ' aria-label="' +
                         rede.nome +
-                        ' de Naka Tattos — ' +
+                        ' de Naka Tattoos — ' +
                         rede.usuario +
                         '" title="' +
                         rede.nome +

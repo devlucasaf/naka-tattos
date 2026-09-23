@@ -3,7 +3,7 @@ window.NAKA = window.NAKA || {};
 window.NAKA.config = {
     artista: {
         nome: "Gustavo Nakandakari",
-        nomeArtistico: "Naka Tattos",
+        nomeArtistico: "Naka Tattoos",
         kanji: "仲村渠グスタボ"
     },
 
@@ -44,7 +44,7 @@ window.NAKA.config = {
         {
             id: "facebook",
             nome: "Facebook",
-            usuario: "Naka Tattos",
+            usuario: "Naka Tattoos",
             url: "https://www.facebook.com/share/1BndRyHR6f/?mibextid=wwXlfr",
             icone: "facebook"
         },

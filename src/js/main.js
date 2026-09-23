@@ -60,7 +60,7 @@
             try {
                 funcao();
             } catch (erro) {
-                console.error("[Naka Tattos] Falha ao iniciar componente:", erro);
+                console.error("[Naka Tattoos] Falha ao iniciar componente:", erro);
             }
         });
     }

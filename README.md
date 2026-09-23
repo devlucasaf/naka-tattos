@@ -3,7 +3,7 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-# 仲村渠グスタボ Naka Tattos
+# 仲村渠グスタボ Naka Tattoos
 
 Landing page do tatuador **Gustavo Nakandakari**, especializado em Old School, Oriental e Realismo em preto e cinza.
 

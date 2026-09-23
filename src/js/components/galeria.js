@@ -4,6 +4,45 @@
     var NAKA = global.NAKA || (global.NAKA = {});
     NAKA.componentes = NAKA.componentes || {};
 
+    function escaparHtml(texto) {
+        return String(texto || '')
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    function renderizarItens(grade, itens) {
+        var prefixo = grade.getAttribute('data-imagens') || 'src/img/';
+        var apenasDestaques = grade.hasAttribute('data-destaques');
+        var destaques = itens.filter(function (item) {
+            return item.destaque;
+        });
+        var lista = apenasDestaques && destaques.length ? destaques : itens.slice();
+
+        var limite = grade.getAttribute('data-limite');
+        if (limite) {
+            lista = lista.slice(0, Number(limite));
+        }
+
+        grade.innerHTML = lista
+            .map(function (item, posicao) {
+                var caminho = item.arquivo.replace('src/img/', prefixo);
+                var classeAlta = posicao === 0 ? ' galeria__item--alto' : '';
+                var dimensoes = item.largura && item.altura
+                    ? ' width="' + item.largura + '" height="' + item.altura + '"'
+                    : '';
+                return (
+                    '<figure class="galeria__item' + classeAlta + '">' +
+                    '<a class="galeria__botao" href="' + caminho + '" data-galeria-item data-legenda="' + escaparHtml(item.legenda) + '">' +
+                    '<img src="' + caminho + '"' + dimensoes +
+                    ' loading="lazy" decoding="async" alt="' + escaparHtml(item.alt) + '" />' +
+                    '</a></figure>'
+                );
+            })
+            .join('');
+    }
+
     function iniciarGaleria() {
         var grade = document.querySelector('[data-galeria]');
         var modal = document.getElementById('lightbox');
@@ -12,6 +51,27 @@
             return;
         }
 
+        var fonte = grade.getAttribute('data-fonte');
+
+        if (!fonte) {
+            configurarLightbox(grade, modal);
+            return;
+        }
+
+        fetch(fonte)
+            .then(function (resposta) {
+                return resposta.json();
+            })
+            .then(function (dados) {
+                renderizarItens(grade, dados.itens || []);
+                configurarLightbox(grade, modal);
+            })
+            .catch(function (erro) {
+                console.error('[Naka Tattoos] Falha ao carregar a galeria:', erro.message);
+            });
+    }
+
+    function configurarLightbox(grade, modal) {
         var gatilhos = Array.prototype.slice.call(grade.querySelectorAll('[data-galeria-item]'));
 
         if (!gatilhos.length) {
